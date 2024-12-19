@@ -26,9 +26,13 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <!-- --------------------------- SLICK CAROUSEL ---------------------------- -->
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+    <!-- ------------------------------- SWIPER -------------------------------- -->
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
     <!-- ------------------------------ STYLE CSS ------------------------------ -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -68,7 +72,7 @@
           </div>
           <div class="welcome-text col-sm-12 col-lg-10">
             <div class="welcome-text-title">
-              <h1>Benvenuto su EasyShare!</h1>
+              <h1>Benvenuto su <span class="Easy">Easy</span><span class="Share">Share</span>!</h1>
             </div>
 
             <p>Siamo lieti di darti il benvenuto nella tua nuova piattaforma di car sharing progettata per rendere gli spostamenti più semplici, sostenibili ed economici.<br/>
@@ -88,9 +92,37 @@
       </div>
     </section> <!-- --------------------------- FINE WELCOME SECTION ---------------------------- -->
 
-    <section id="carousel">
+    <!-- -------------------------- CAROSELLO SWIPER --------------------------- -->
+     <!-- Demo styles -->
+  
+</head>
 
-    </section>
+
+<!-- DA AGGIUSTARE FOTO PROVVISORIE DOMANI LE METTO GIUSTE -->
+<div class="container">
+  <section>
+  
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"> <img src="images/fiat-panda.jpg" alt="" srcset=""></div>
+          <div class="swiper-slide"> <img src="images/audi q6-e-tron.jpg" alt="" srcset=""></div>
+          <div class="swiper-slide"> <img src="images/jeep.jpg" alt="" srcset=""></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 48 48">
+          </svg>
+          <span></span>
+        </div>
+      </div>
+  </section>
+</div>
+
+
+    <!-- ------------------------ FINE CAROSELLO SWIPER ------------------------ -->
 
 
 
@@ -116,15 +148,12 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+    
+    <!-- ---------------------------- SCRIPT SWIPER ---------------------------- -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+
     <!-- ------------------------------- JS------------------------------- -->
     <script src="js/homepage.js"></script>
 
