@@ -15,8 +15,15 @@ public class UtenteServiceImpl implements UtenteService{
 	
 	@Override
 	public List<UtenteEntity> getAll() {
-		List<UtenteEntity> utenti = utenteRepository.findAllPROVA();
+		List<UtenteEntity> utenti = utenteRepository.findAll();
 		return utenti;
 	}
+
+	@Override
+	public UtenteEntity getByEmail(String email) {
+		return utenteRepository.findByEmail(email);
+	}
+	
+	
 
 }
