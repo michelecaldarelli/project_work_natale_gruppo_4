@@ -15,15 +15,14 @@ $('.fade').slick({
     cssEase: 'linear'
   }); */
 
-# --------------------------------- HOME PAGE -------------------------------- #
 
+# --------------------------------- HOME PAGE -------------------------------- #
 
 Tale pagina conterrà:
 1. un carousel o uno slider (vedi sezione carousel)
 2. l’elenco dei veicoli disponibili (vedi sezione disponibilita)
 3. un link al pannello di lavoro (vedi sezione pannello)
-4. un link per il logout o per il login a seconda che l’utente abbia già superato o meno le procedure di
-autenticazione
+4. un link per il logout o per il login a seconda che l’utente abbia già superato o meno le procedure di autenticazione
 
 
 # --------------------------------- Carousel --------------------------------- #
@@ -33,35 +32,32 @@ Si tratta di slide scorrevoli composte da testo e immagine per evidenziare i pun
 Usare Swiper JS o Slick.
 
 
+# -------------------------- disponibilità veicoli ------------------------- #
 
-  /* -------------------------- disponibilità veicoli ------------------------- */
 
+Dovrà essere costituito da un elenco contenente veicoli aggiornati dinamicamente (facoltativo: in funzione della data e dell’ora). Suddiviso in 2 sezioni, la prima conterrà i veicoli disponibili, la seconda conterrà l’elenco dei veicoli attualmente in fase di noleggio.
 
-Dovrà essere costituito da un elenco contenente veicoli aggiornati dinamicamente (facoltativo: in funzione
-della data e dell’ora). Suddiviso in 2 sezioni, la prima conterrà i veicoli disponibili, la seconda conterrà
-l’elenco dei veicoli attualmente in fase di noleggio.
 Ciascun veicolo dovrà essere rappresentato attraverso gli elementi:
-Categoria – Alimentazione – Indirizzo – link alla pagina veicolo.html con passaggio dell’ID dell’evento
-come parametro di una richiesta http di tipo GET. 
-
+  Categoria – 
+  Alimentazione – 
+  Indirizzo – 
+  link alla pagina veicolo.html con passaggio dell’ID dell’evento come parametro di una richiesta http di tipo GET. 
 
 
 # ----------------- Pagina del singolo veicolo (veicolo.html) ---------------- #
 
-Tale pagina viene prodotta dinamicamente in funzione dell’ID del veicolo ricevuto come parametro di una
-richiesta di GET. Qualora la pagina venisse richiesta senza nessun parametro, l’utente deve essere
-rediretto verso la pagina home.
+Tale pagina viene prodotta dinamicamente in funzione dell’ID del veicolo ricevuto come parametro di una richiesta di GET. Qualora la pagina venisse richiesta senza nessun parametro, l’utente deve essere rediretto verso la pagina home.
+
 Tale pagina dovrà contenere tutte le informazioni disponibili sul veicolo, opportunamente
 impaginate, se disponibile alla prenotazione, e una mappa con il marker sulla posizione del veicolo
 (facoltativo, vedi appendice B).
 
 
-
 # -------------------- Pannello di lavoro (pannello.html) -------------------- #
-
 
 Protetta da un controllo per l’autenticazione, accesso limitato ad utenti con ruolo di amministratore,
 deve mostrare i seguenti contenuti:
+
 1. Se l’utente non ha già effettuato le operazioni di login, deve essere visualizzato un form di login in
 cui inserire UserID e password, per poi essere reindirizzati, una volta autenticati, alla stessa pagina
 protetta dalla quale è scaturita la richiesta di login.
@@ -72,27 +68,24 @@ parco veicoli e un link per il logout.
 
 3. Se l’utente è di tipo admin (“ADMIN”) deve essere visualizzato un pannello di amministrazione
 contenente le 2 seguenti funzionalità:
-a. Inserimento di un nuovo veicolo – link a inserisci.html
-b. Logout
+  a. Inserimento di un nuovo veicolo – link a inserisci.html
+  b. Logout
 
 
 # ----------- Pagina di inserimento di un veicolo (inserisci.html) ----------- #
 
-
 Protetta da un controllo per l’autenticazione. Deve prevedere un form per l’inserimento di un veicolo
 nell’archivio e un bottone di logout attraverso il quale tornare alla pagina home.
 Tale form dovrà contenere i seguenti campi:
-    Categoria Veicolo,
-    Descrizione, 
-    Alimentazione,
-    Indirizzo, 
-    Coordinate GPS, - non obbligatorio
-    Disponibilità al noleggio, - non obbligatorio
-    Upload di un immagine, - non obbligatorio
-URL di una pagina web esterna all’applicazione per cercare indirizzo e coordinate gps (es. OpenStreetMap). https://www.openstreetmap.org/#map=5/42.09/12.56
+  Categoria Veicolo,
+  Descrizione, 
+  Alimentazione,
+  Indirizzo, 
+  Coordinate GPS, - non obbligatorio
+  Disponibilità al noleggio, - non obbligatorio
+  Upload di un immagine, - non obbligatorio URL di una pagina web esterna all’applicazione per cercare indirizzo e coordinate gps (es. OpenStreetMap). https://www.openstreetmap.org/#map=5/42.09/12.56
 
-L’inserimento delle informazioni relative agli ultimi tre campi del form non deve
-essere obbligatorio.
+L’inserimento delle informazioni relative agli ultimi tre campi del form non deve essere obbligatorio.
 (facoltativo - implementare inserimento dinamico di indirizzo e coordinate tramite javascript)
 Attraverso questa pagina l’amministratore deve poter inserire le informazioni relative ad un nuovo veicolo, che pertanto dovranno essere visibili nella home e attraverso la pagina del singolo veicolo.
 
@@ -105,13 +98,13 @@ dell’utente dell’applicativo e il ritorno alla pagina home - BOTTONE
 
 # ------------------------ Pagina utente (utente.html) ----------------------- #
 
-
 Protetta da un controllo per l’autenticazione.
 Deve contenere l’elenco prenotazioni di un utente con la possibilità modifica e/o cancellare la
 prenotazione, ed un eventuale elenco prenotazioni chiuse/terminate.
 
 
 # -------------------------------- Appendice B ------------------------------- #
+
 ● Trello, Figma, Unsplash
 ○ Organizzazione e assegnazione task https://trello.com/
 ○ https://www.figma.com/
@@ -130,5 +123,3 @@ prenotazione, ed un eventuale elenco prenotazioni chiuse/terminate.
 ● Tutti i nomi delle pagine html e attributi database possono essere modificati a piacere, l’importante
 è mantenere le funzionalità richieste
 ● Realizzare il progetto usando un design pattern REST.
-
-

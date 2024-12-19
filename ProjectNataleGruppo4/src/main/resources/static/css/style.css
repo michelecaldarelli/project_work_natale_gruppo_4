@@ -1,10 +1,18 @@
+/* ----------------------------- REGOLE GENERALI ---------------------------- */
+* {
+    box-sizing: border-box;
+}
+  
+img {
+    max-width: 100%;
+}
+  
+.container {
+    width: 96%; 
+    margin: 0 auto;
+}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
+h1, h2, h3, h4, h5, h6{
     font-family: "Poppins", serif;
 }
 
@@ -20,18 +28,21 @@ p{
     margin-right: 5px;
 }
 
-.navbar-brand h2 {
-    color: #189ddc;
-}
-
-.navbar-brand span {
-    color: #005478;
-}
-
 /* --------------------------------- SECTION -------------------------------- */
 
 #welcome{
     background-color: #007bff;
+}
+
+.welcome-img img{
+    width: 120px;
+    border: 2px solid #005478;
+    border-radius: 100px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    height: auto;
+    margin: 20px auto;
 }
 
 .Easy{
@@ -41,11 +52,44 @@ p{
     color: #189ddc;
 }
 
-h1{
-    color: white;
+.welcome-text-title {
+    text-align: center;
+    margin: 20px auto;
 }
 
-.container img{
+
+.welcome-text p {
+    color: #f8f9fa;
+}
+
+h1{
+    color: #f8f9fa;
+}
+
+.welcome-img img{
     width: 120px;
-    border: 1px solid #005478;
+    border: 2px solid #005478;
+    border-radius: 100px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    height: auto;
+    margin: 20px auto;
+}
+
+/* ----------------------------- SCHERMI GRANDI ----------------------------- */
+@media screen and (min-width:992px) {
+
+    .welcome-img {
+        display: flex;
+        align-items: center;
+    }
+
+    .welcome-text {
+        margin: 30px auto;
+    }
+
+    .welcome-text-title {
+        text-align: left;
+    }
 }

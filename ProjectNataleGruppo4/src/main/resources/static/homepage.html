@@ -32,19 +32,17 @@
     <!-- ------------------------------ STYLE CSS ------------------------------ -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <!-- ----------------------------- INIZIO BODY ----------------------------- -->
+
   <body>
 
-    <!-- ------------------------------- NAVBAR -------------------------------- -->
-
-    <header>
+    <header> <!-- ------------------------------- NAVBAR -------------------------------- -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <img class="navimg" src="images/EasyShareMacchinaQuadrata.png" alt="" srcset="">
-          <a class="navbar-brand" href="#"><h2><span>Easy</span>Share</h2></a>
+          <a class="navbar-brand" href="#"><h2><span class="Easy">Easy</span><span class="Share">Share</span></h2></a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -60,26 +58,39 @@
           </div>
         </div>
       </nav>
-    </header>
+    </header> <!-- ----------------------------- FINE NAVBAR ----------------------------- -->
 
-    <!-- ----------------------------- FINE NAVBAR ----------------------------- -->
-
-    <!-- -------------------------- INIZIO SECTION 1 --------------------------- -->
-
-    <section id="welcome">
-
+    <section id="welcome"> <!-- -------------------------- WELCOME SECTION --------------------------- -->
       <div class="container" >
-        <img src="images/EasyShareLogo.png" alt="" srcset="">
-        <h1>Benvenuto su <span class="Easy">Easy</span><span class="Share">Share</span>!</h1>
-        
+        <div class="row">
+          <div class="welcome-img col-sm-12 col-lg-2">
+            <img src="images/EasyShareLogo.png" alt="" srcset="">
+          </div>
+          <div class="welcome-text col-sm-12 col-lg-10">
+            <div class="welcome-text-title">
+              <h1>Benvenuto su EasyShare!</h1>
+            </div>
 
+            <p>Siamo lieti di darti il benvenuto nella tua nuova piattaforma di car sharing progettata per rendere gli spostamenti più semplici, sostenibili ed economici.<br/>
+            <br/>
+            Perché scegliere EasyShare?<br/>
+            <br/>
+            🌿 Sostenibilità: Condividere i veicoli significa ridurre l'impatto ambientale e migliorare la qualità dell'aria.<br/>
+            <br/>
+            🚗 Flessibilità: Auto, scooter, monopattini e biciclette. Scegli il mezzo giusto per ogni esigenza.<br/>
+            <br/>
+            💰 Convenienza: Paghi solo per il tempo che utilizzi il veicolo, senza costi nascosti.<br/>
+            <br/>
+            📍 Facilità d'uso: Trova un veicolo disponibile vicino a te in pochi clic.<br/>
+            </p>
+          </div>
+        </div>
       </div>
+    </section> <!-- --------------------------- FINE WELCOME SECTION ---------------------------- -->
 
-
+    <section id="carousel">
 
     </section>
-
-
 
 
 
@@ -116,5 +127,6 @@
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <!-- ------------------------------- JS------------------------------- -->
     <script src="js/homepage.js"></script>
+
   </body>
 </html>
