@@ -32,7 +32,15 @@ public class VeicoloEntity {
 	
 	@Column(length = 50)
 	private String immagineVeicolo;
+	
+	
 
+	public VeicoloEntity(String categoria, String alimentazione, String indirizzo, boolean disponibilita) {
+		this.categoria = categoria;
+		this.alimentazione = alimentazione;
+		this.indirizzo = indirizzo;
+		this.disponibilita = disponibilita;
+	}
 	// Getters and Setters
 	public long getId() {
 		return id;

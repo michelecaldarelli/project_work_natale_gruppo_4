@@ -6,5 +6,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface VeicoloService {
 
-	VeicoloEntity postVeicolo(String categoria, String alimentazione, String indirizzo, boolean disp);
+	VeicoloEntity postVeicolo(VeicoloEntity veicolo);
 }
