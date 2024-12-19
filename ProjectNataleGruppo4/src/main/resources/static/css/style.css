@@ -1,0 +1,51 @@
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: "Poppins", serif;
+}
+
+p{
+    font-family: "Inter", serif;
+}
+
+
+/* --------------------------------- NAVBAR --------------------------------- */
+
+.navimg{
+    width: 50px;
+    margin-right: 5px;
+}
+
+.navbar-brand h2 {
+    color: #189ddc;
+}
+
+.navbar-brand span {
+    color: #005478;
+}
+
+/* --------------------------------- SECTION -------------------------------- */
+
+#welcome{
+    background-color: #007bff;
+}
+
+.Easy{
+    color: #005478;
+}
+.Share{
+    color: #189ddc;
+}
+
+h1{
+    color: white;
+}
+
+.container img{
+    width: 120px;
+    border: 1px solid #005478;
+}
