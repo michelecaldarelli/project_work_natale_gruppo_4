@@ -17,6 +17,12 @@ public class VeicoloEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	@Column(length = 150, nullable = false)
+	private String marca;
+	
+	@Column(length = 150, nullable = false)
+	private String modello;
+	
 	@Column(columnDefinition = "ENUM('BICICLETTA', 'MACCHINA', 'MOTO')", nullable = true)
 	@Enumerated(EnumType.STRING)
 	private Categoria categoria;
@@ -41,12 +47,27 @@ public class VeicoloEntity {
 	public VeicoloEntity() {
 	}
 	
-	public VeicoloEntity(Categoria categoria, String alimentazione, String indirizzo, boolean disponibilita) {
-		this.categoria = categoria;
-		this.alimentazione = alimentazione;
-		this.indirizzo = indirizzo;
-		this.disponibilita = disponibilita;
+	
+	public String getMarca() {
+		return marca;
 	}
+
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+
+	public String getModello() {
+		return modello;
+	}
+
+
+	public void setModello(String modello) {
+		this.modello = modello;
+	}
+
+
 	// Getters and Setters
 	public long getId() {
 		return id;
@@ -92,6 +113,21 @@ public class VeicoloEntity {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+
+
+	public VeicoloEntity(long id, String marca, String modello, Categoria categoria, String descrizione,
+			String alimentazione, String indirizzo, boolean disponibilita, String immagineVeicolo) {
+		super();
+		this.id = id;
+		this.marca = marca;
+		this.modello = modello;
+		this.categoria = categoria;
+		this.descrizione = descrizione;
+		this.alimentazione = alimentazione;
+		this.indirizzo = indirizzo;
+		this.disponibilita = disponibilita;
+		this.immagineVeicolo = immagineVeicolo;
 	}
 	
 	
