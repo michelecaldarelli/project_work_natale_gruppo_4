@@ -1,5 +1,7 @@
 package org.generation.jpa.services;
 
+import java.util.List;
+
 import org.generation.jpa.entities.VeicoloEntity;
 import org.springframework.stereotype.Service;
 
@@ -13,5 +15,7 @@ public interface VeicoloService {
 	VeicoloEntity prenotaVeicolo(VeicoloEntity v);
 	
 	VeicoloEntity lasciaVeicolo(VeicoloEntity v);
+	
+	List<VeicoloEntity> getAll();
 	
 }

@@ -1,5 +1,9 @@
 package org.generation.jpa.restctrl;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.generation.jpa.entities.UtenteEntity;
 import org.generation.jpa.entities.VeicoloEntity;
 import org.generation.jpa.services.VeicoloService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -100,7 +104,17 @@ public class VeicoloCtrl {
 		} catch (Exception e) {
 			return ResponseEntity.internalServerError().body(new VeicoloEntity());
 		}
-		
+	}
+	
+	@GetMapping("")
+	public ResponseEntity<List<VeicoloEntity>> getAll() {
+		try {    
+          List<VeicoloEntity> veicoli = veicoloService.getAll();
+          return ResponseEntity.ok(veicoli);
+		}
+		catch (Exception e) {
+          return ResponseEntity.internalServerError().body(new ArrayList<VeicoloEntity>());
+		}
 	}
 
 }

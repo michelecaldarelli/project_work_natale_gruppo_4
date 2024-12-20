@@ -1,5 +1,8 @@
 package org.generation.jpa.services;
 
+import java.util.List;
+
+import org.generation.jpa.entities.UtenteEntity;
 import org.generation.jpa.entities.VeicoloEntity;
 import org.generation.jpa.repositories.VeicoloRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +41,12 @@ public class VeicoloServiceImpl implements VeicoloService{
 		veicoloRepository.save(v);
 		
 		return v;
+	}
+
+	@Override
+	public List<VeicoloEntity> getAll() {
+		List<VeicoloEntity> veicoli = veicoloRepository.findAll();
+		return veicoli;
 	}
 	
 	
