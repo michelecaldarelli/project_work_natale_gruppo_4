@@ -298,9 +298,7 @@ footer ul li a:hover {
   padding: 20px 0;
 }
 
-.card-image {
-  display: contents;
-}
+
 
 
 
@@ -314,6 +312,11 @@ footer ul li a:hover {
   #hero {
     height: 40vh;
     margin-top: 70px;
+  }
+
+  .card-image {
+    display: flex;
+    align-items: center;
   }
 }
 /* ----------------------------- SCHERMI GRANDI ----------------------------- */
