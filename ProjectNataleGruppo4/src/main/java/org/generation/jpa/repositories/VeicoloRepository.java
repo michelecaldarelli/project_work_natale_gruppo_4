@@ -8,4 +8,8 @@ public interface VeicoloRepository extends JpaRepository<VeicoloEntity, Long> {
 	
 	
 //	String categoria, String alimentazione, String indirizzo, boolean disp
+	
+	//prova
+//	prova
+//	proova
 }
