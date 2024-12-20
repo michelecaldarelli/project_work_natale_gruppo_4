@@ -22,10 +22,6 @@ h6 {
   color: #005478;
 }
 
-h5 {
-  margin: 10px;
-}
-
 p {
   font-family: "Inter", serif;
 }
@@ -278,11 +274,42 @@ footer ul li a:hover {
   color: #f8f9fa;
 }
 
+/* ------------------------------ VEICOLO.HTML ------------------------------ */
+
+#hero {
+  height: 26vh; /* imposto l'altezza al 100% del viewport */
+  background-image: url('../images/hero.jpg');
+  background-size: cover; /* copre l'intera area */
+  background-position: center center; /* posiziona l'immagine al centro. Corrsiponde a background-position-x: center, background-position-y: center */
+  background-repeat: no-repeat; /* non ripete l'immagine */
+  display: flex; /* per poter utilizzare la proprietà justify-content */
+  justify-content: center; /* per centrare i figli orizzontalmente*/
+  align-items: center; /* per centrare i figli verticalmente */
+  text-align: center; /* per centrare il testo */
+  margin-top: 68px;
+}
+
+#veicolo {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+.card-image {
+  display: contents;
+}
+
+
+
 /* ------------------------------ SCHERMI MEDI ------------------------------ */
 
 @media screen and (min-width: 768px) {
   #welcome {
     margin-top: 68px;
+  }
+
+  #hero {
+    height: 40vh;
+    margin-top: 70px;
   }
 }
 /* ----------------------------- SCHERMI GRANDI ----------------------------- */
@@ -309,5 +336,15 @@ footer ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  #hero {
+    height: 87vh;
+    margin-top: 73px;
+  }
+
+  .card-image {
+    display: flex;
+    align-items: center;
   }
 }
