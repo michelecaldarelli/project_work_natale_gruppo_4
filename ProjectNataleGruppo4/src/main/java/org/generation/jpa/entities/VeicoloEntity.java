@@ -2,6 +2,8 @@ package org.generation.jpa.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -15,8 +17,9 @@ public class VeicoloEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Column(length = 75, nullable = false)
-	private String categoria;
+	@Column(columnDefinition = "ENUM('BICICLETTA', 'MACCHINA', 'MOTO')", nullable = true)
+	@Enumerated(EnumType.STRING)
+	private Categoria categoria;
 	
 	@Column(length = 150)
 	private String descrizione;
@@ -38,7 +41,7 @@ public class VeicoloEntity {
 	public VeicoloEntity() {
 	}
 	
-	public VeicoloEntity(String categoria, String alimentazione, String indirizzo, boolean disponibilita) {
+	public VeicoloEntity(Categoria categoria, String alimentazione, String indirizzo, boolean disponibilita) {
 		this.categoria = categoria;
 		this.alimentazione = alimentazione;
 		this.indirizzo = indirizzo;
@@ -51,12 +54,7 @@ public class VeicoloEntity {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getCategoria() {
-		return categoria;
-	}
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
+	
 	public String getDescrizione() {
 		return descrizione;
 	}
@@ -86,6 +84,14 @@ public class VeicoloEntity {
 	}
 	public void setImmagineVeicolo(String immagineVeicolo) {
 		this.immagineVeicolo = immagineVeicolo;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
 	
 	

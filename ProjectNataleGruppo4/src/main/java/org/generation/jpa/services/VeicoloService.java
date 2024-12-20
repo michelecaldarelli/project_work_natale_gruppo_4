@@ -9,4 +9,9 @@ public interface VeicoloService {
 	VeicoloEntity postVeicolo(VeicoloEntity veicolo);
 	
 	VeicoloEntity getVeicoloById(long id);
+	
+	VeicoloEntity prenotaVeicolo(VeicoloEntity v);
+	
+	VeicoloEntity lasciaVeicolo(VeicoloEntity v);
+	
 }

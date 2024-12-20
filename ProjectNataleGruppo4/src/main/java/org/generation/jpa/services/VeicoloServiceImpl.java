@@ -21,5 +21,25 @@ public class VeicoloServiceImpl implements VeicoloService{
 	public VeicoloEntity getVeicoloById(long id) {
 		return veicoloRepository.findVeicoloById(id);
 	}
+
+	@Override
+	public VeicoloEntity prenotaVeicolo(VeicoloEntity v) {
+
+		v.setDisponibilita(false);
+		veicoloRepository.save(v);
+		
+		return v;
+	}
+
+	@Override
+	public VeicoloEntity lasciaVeicolo(VeicoloEntity v) {
+		
+		v.setDisponibilita(true);
+		veicoloRepository.save(v);
+		
+		return v;
+	}
+	
+	
 	
 }
