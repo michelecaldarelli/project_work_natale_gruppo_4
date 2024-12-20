@@ -23,7 +23,7 @@ h6 {
 }
 
 h5 {
-    margin: 10px;
+  margin: 10px;
 }
 
 p {
@@ -32,13 +32,17 @@ p {
 
 /* --------------------------------- NAVBAR --------------------------------- */
 
+.navbar {
+    border-bottom: 2px solid #005478;
+}
+
 .navimg {
   width: 50px;
   margin-right: 5px;
 }
 
 .nav-link {
-    color:#005478;
+  color: #005478;
 }
 
 /* --------------------------------- SECTION -------------------------------- */
@@ -47,16 +51,16 @@ p {
   background-color: #007bff;
   border-top: 2px solid #005478;
   border-bottom: 2px solid #005478;
+  margin-top: 66px;
 }
 
 .welcome-img img {
-  width: 120px;
+  width: 200px;
   border: 2px solid #005478;
   border-radius: 100px;
   max-width: 100%;
   height: auto;
   display: block;
-  height: auto;
   margin: 20px auto;
 }
 
@@ -78,17 +82,6 @@ p {
 
 h1 {
   color: #f8f9fa;
-}
-
-.welcome-img img {
-  width: 120px;
-  border: 2px solid #005478;
-  border-radius: 100px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  height: auto;
-  margin: 20px auto;
 }
 
 /* -------------------------------- CAROSELLO ------------------------------- */
@@ -156,142 +149,149 @@ h1 {
 }
 
 #carousel-description {
-    margin-top: 10px;
-    color: #189ddc;
+  margin-top: 10px;
+  color: #189ddc;
 }
 
 .info {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 /* ----------------------------- NEUTRO ----------------------------- */
 
 #neutro {
-    padding-top: 20px;
-    background: #f8f9fa;
+  padding-top: 20px;
+  background: #f8f9fa;
 }
 
 .neutro-title {
-    color: #005478;
-    font-weight: 400;
-    margin-bottom: 30px;
+  color: #005478;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
 .icon {
-    color: #007bff;
-    text-align: center;
+  color: #007bff;
+  text-align: center;
 }
 
 .icon p {
-    color: #189ddc;
-    font-size: 24px;
+  color: #189ddc;
+  font-size: 24px;
 }
 
 /* --------------------------- VEICOLI DISPONIBILI -------------------------- */
 
 #disponibili {
-    background-color: #f8f9fa;
-    padding-top: 20px;
+  background-color: #f8f9fa;
+  padding-top: 20px;
 }
 
 .veicoli-title {
-    border-bottom: 2px dashed #005478;
-    color: #005478;
-    margin: 10px;
+  border-bottom: 2px dashed #005478;
+  color: #005478;
+  margin: 10px;
 }
 
 .card-title {
-    color: #005478;
+  color: #005478;
 }
 
 .card {
-    margin: 10px;
+  margin: 10px;
 }
-
 
 /* --------------------------- VEICOLI NOLEGGIATI -------------------------- */
 
 #noleggiati {
-    background-color: #f8f9fa;
-    padding: 20px 0;
+  background-color: #f8f9fa;
+  padding: 20px 0;
 }
 
 /* --------------------------------- FOOTER --------------------------------- */
 footer {
-    background-color: #007bff;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-weight: 400;
-    padding: 50px 0;
-    text-decoration: none;
+  background-color: #007bff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  padding: 50px 0;
+  text-decoration: none;
 }
 
 .social {
-    text-align: center;
-    padding-bottom: 25px;
-    color: #f8f9fa;
+  text-align: center;
+  padding-bottom: 25px;
+  color: #f8f9fa;
 }
 .social a {
-    font-size: 24px;
-    color: inherit;
-    border: 1px solid #f8f9fa;
-    width: 40px;
-    height: 40px;
-    line-height: 38px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 8px;
-    opacity: 0.75;
+  font-size: 24px;
+  color: inherit;
+  border: 1px solid #f8f9fa;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75;
 }
 
 .social a:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 footer ul {
-    margin-top: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
-    text-align: center;
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 footer ul a {
-    color: inherit;
-    text-decoration: none;
-    opacity: 0.8;
-    color: #f8f9fa;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+  color: #f8f9fa;
 }
 
 footer ul li {
-    display: inline-block;
-    padding: 0 15px;
+  display: inline-block;
+  padding: 0 15px;
 }
 
 footer ul li a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .copyright {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 12px;
-    color: #f8f9fa;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #f8f9fa;
 }
 
 /* ------------------------------ SCHERMI MEDI ------------------------------ */
-@media screen and (min-width:768px) {
 
+@media screen and (min-width: 768px) {
+  #welcome {
+    margin-top: 68px;
+  }
 }
 /* ----------------------------- SCHERMI GRANDI ----------------------------- */
+
 @media screen and (min-width: 992px) {
+  #welcome {
+    margin-top: 71px;
+  }
+
   .welcome-img {
     display: flex;
     align-items: center;
@@ -308,6 +308,6 @@ footer ul li a:hover {
   .info {
     display: flex;
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center;
   }
 }
