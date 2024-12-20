@@ -19,14 +19,19 @@ public class UtenteEntity {
 	
 	@Column(length = 75, nullable = false)
 	private String nome;
+	
 	@Column(length = 75, nullable = false)
 	private String cognome;
+	
 	@Column(nullable = false)
 	private Date dataNascita;
+	
 	@Column(length = 50, nullable = false)
 	private String email;
+	
 	@Column(length = 20, nullable = false)
 	private String password;
+	
 	@Column(length = 30, nullable = false)
 	private String ruolo;
 	
