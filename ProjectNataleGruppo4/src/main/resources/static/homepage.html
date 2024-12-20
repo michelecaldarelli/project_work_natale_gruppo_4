@@ -1,134 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EasyShare</title>
-    <!-- ------------------------------- FAVICON ------------------------------- -->
-    <link rel="icon" type="image/x-icon" href="/images/EasyShareLogoFavicon.png">
-    <!-- -------------------------------- FONTS -------------------------------- -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    /> 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- ------------------------------ BOOTSTRAP ------------------------------ -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
 
-    <!-- ------------------------------- SWIPER -------------------------------- -->
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EasyShare</title>
+  <!-- ------------------------------- FAVICON ------------------------------- -->
+  <link rel="icon" type="image/x-icon" href="/images/EasyShareLogoFavicon.png">
+  <!-- ---------------------------- FONT-AWESOME ----------------------------- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- -------------------------------- FONTS -------------------------------- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <!-- ------------------------------ BOOTSTRAP ------------------------------ -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
-    <!-- ------------------------------ STYLE CSS ------------------------------ -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+  <!-- ------------------------------- SWIPER -------------------------------- -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <body>
+  <!-- ------------------------------ STYLE CSS ------------------------------ -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <header> <!-- ------------------------------- NAVBAR -------------------------------- -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <img class="navimg" src="images/EasyShareMacchinaQuadrata.png" alt="" srcset="">
-          <a class="navbar-brand" href="#"><h2><span class="Easy">Easy</span><span class="Share">Share</span></h2></a>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Pannello</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Disponibilità</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <button class="btn btn-outline-success" type="submit">Accedi</button>
-            </form>
-          </div>
+<body>
+
+  <header> <!-- ------------------------------- NAVBAR -------------------------------- -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <img class="navimg" src="images/EasyShareMacchinaQuadrata.png" alt="" srcset="">
+        <a class="navbar-brand" href="#">
+          <h2><span class="Easy">Easy</span><span class="Share">Share</span></h2>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Pannello</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Disponibilità</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <button class="btn btn-outline-success" type="submit">Accedi</button>
+          </form>
         </div>
-      </nav>
-    </header> <!-- ----------------------------- FINE NAVBAR ----------------------------- -->
+      </div>
+    </nav>
+  </header> <!-- ----------------------------- FINE NAVBAR ----------------------------- -->
 
-    <section id="welcome"> <!-- -------------------------- WELCOME SECTION --------------------------- -->
-      <div class="container" >
-        <div class="row">
-          <div class="welcome-img col-sm-12 col-lg-2">
-            <img src="images/EasyShareLogo.png" alt="" srcset="">
+  <section id="welcome"> <!-- -------------------------- WELCOME SECTION --------------------------- -->
+    <div class="container">
+      <div class="row">
+        <div class="welcome-img col-sm-12 col-lg-2">
+          <img src="images/EasyShareLogo.png" alt="" srcset="">
+        </div>
+        <div class="welcome-text col-sm-12 col-lg-10">
+          <div class="welcome-text-title">
+            <h1>Benvenuto su EasyShare!</h1>
           </div>
-          <div class="welcome-text col-sm-12 col-lg-10">
-            <div class="welcome-text-title">
-              <h1>Benvenuto su <span class="Easy">Easy</span><span class="Share">Share</span>!</h1>
-            </div>
 
-            <p>Siamo lieti di darti il benvenuto nella tua nuova piattaforma di car sharing progettata per rendere gli spostamenti più semplici, sostenibili ed economici.<br/>
+          <p>Siamo lieti di darti il benvenuto nella tua nuova piattaforma di car sharing progettata per rendere gli
+            spostamenti più semplici, sostenibili ed economici.<br/>
             <br/>
             Perché scegliere EasyShare?<br/>
             <br/>
-            🌿 Sostenibilità: Condividere i veicoli significa ridurre l'impatto ambientale e migliorare la qualità dell'aria.<br/>
+            🌿 Sostenibilità: Condividere i veicoli significa ridurre l'impatto ambientale e migliorare la qualità
+            dell'aria.<br />
             <br/>
             🚗 Flessibilità: Auto, scooter, monopattini e biciclette. Scegli il mezzo giusto per ogni esigenza.<br/>
             <br/>
             💰 Convenienza: Paghi solo per il tempo che utilizzi il veicolo, senza costi nascosti.<br/>
             <br/>
             📍 Facilità d'uso: Trova un veicolo disponibile vicino a te in pochi clic.<br/>
-            </p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section> <!-- --------------------------- FINE WELCOME SECTION ---------------------------- -->
+
+  <!-- DA AGGIUSTARE usare una foto png, che siano centrate nel carosello -->
+  <section id="inner-carousel"> <!-- -------------------------- CAROSELLO SWIPER --------------------------- -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"> <img src="images/panda.png" alt="" srcset=""></div>
+              <div class="swiper-slide"> <img src="images/scooter.png" alt="" srcset=""></div>
+              <div class="swiper-slide"> <img src="images/jeep.png" alt="" srcset=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="autoplay-progress">
+              <svg viewBox="0 0 48 48">
+              </svg>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </section> <!-- ------------------------ FINE CAROSELLO SWIPER ------------------------ -->
+
+  <section id="neutro">
+    <div class="container">
+      <div class="neutro-title text-center">
+        <h2>Perché un veicolo quando ne puoi scegliere tre?</h2>
+      </div>
+      <div class="icons">
+        <div class="row">
+          <div class="icon col-sm-12 col-md-12 col-lg-4">
+            <i class="fa-solid fa-bicycle fa-8x"></i>
+            <p>Biciclette</p>
+          </div>
+          <div class="icon col-sm-12 col-md-12 col-lg-4">
+            <i class="fa-solid fa-motorcycle fa-8x"></i>
+            <p>Motociclette</p>
+          </div>
+          <div class="icon col-sm-12 col-md-12 col-lg-4">
+            <i class="fa-solid fa-car fa-8x"></i>
+            <p>Automobili</p>
           </div>
         </div>
       </div>
-    </section> <!-- --------------------------- FINE WELCOME SECTION ---------------------------- -->
+    </div>
+  </section>
 
-    <!-- -------------------------- CAROSELLO SWIPER --------------------------- -->
-     <!-- Demo styles -->
-  
-</head>
+  <section id="disponibili"> <!-- ----------- VEICOLI DISPONIBILI ------------ -->
+    <div class="container">
+      <div class="veicoli-title">
+        <h2>Veicoli Disponibili</h2>
+      </div>
+      <h5>In evidenza</h5>
 
-
-<!-- DA AGGIUSTARE FOTO PROVVISORIE DOMANI LE METTO GIUSTE -->
-<div class="container">
-  <section>
-  
-      <!-- Swiper -->
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"> <img src="images/fiat-panda.jpg" alt="" srcset=""></div>
-          <div class="swiper-slide"> <img src="images/audi q6-e-tron.jpg" alt="" srcset=""></div>
-          <div class="swiper-slide"> <img src="images/jeep.jpg" alt="" srcset=""></div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-        <div class="autoplay-progress">
-          <svg viewBox="0 0 48 48">
-          </svg>
-          <span></span>
+      <div class="cards-disponibili">
+        <div class="row">
+          <div class="card-container col-sm-12 col-md-6 col-lg-3">
+            <div class="card" style="width: 15rem;">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Nome Mezzo</h5>
+                <p class="card-text">
+                  Categoria: <br/>
+                  Alimentazione: <br/>
+                  Indirizzo: <br/>
+                </p>
+                <a href="./veicolo.html" class="btn btn-outline-primary">Scopri di più</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-container col-sm-12 col-md-6 col-lg-3">
+            <div class="card" style="width: 15rem;">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Nome Mezzo</h5>
+                <p class="card-text">
+                  Categoria: <br/>
+                  Alimentazione: <br/>
+                  Indirizzo: <br/>
+                </p>
+                <a href="./veicolo.html" class="btn btn-outline-primary">Scopri di più</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-container col-sm-12 col-md-6 col-lg-3">
+            <div class="card" style="width: 15rem;">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Nome Mezzo</h5>
+                <p class="card-text">
+                  Categoria: <br/>
+                  Alimentazione: <br/>
+                  Indirizzo: <br/>
+                </p>
+                <a href="./veicolo.html" class="btn btn-outline-primary">Scopri di più</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-container col-sm-12 col-md-6 col-lg-3">
+            <div class="card" style="width: 15rem;">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Nome Mezzo</h5>
+                <p class="card-text">
+                  Categoria: <br/>
+                  Alimentazione: <br/>
+                  Indirizzo: <br/>
+                </p>
+                <a href="./veicolo.html" class="btn btn-outline-primary">Scopri di più</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-  </section>
-</div>
 
-    <!-- prova vsc -->
+      <h5>I nuovi arrivi</h5>
+      <div class="cards">
+        <div class="row">
+          <div class="card-container col-sm-12 col-md-6 col-lg-3">
+            <div class="card-container col-sm-12 col-md-6 col-lg-3">
+              <div class="card" style="width: 15rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Nome Mezzo</h5>
+                  <p class="card-text">
+                    Categoria: <br/>
+                    Alimentazione: <br/>
+                    Indirizzo: <br/>
+                  </p>
+                  <a href="./veicolo.html" class="btn btn-outline-primary">Scopri di più</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-container col-sm-12 col-md-6 col-lg-3">
+            
+          </div>
+          <div class="card-container col-sm-12 col-md-6 col-lg-3">
+            
+          </div>
+          <div class="card-container col-sm-12 col-md-6 col-lg-3">
+            
+          </div>
+        </div>
+      </div>
 
-    <!-- ------------------------ FINE CAROSELLO SWIPER ------------------------ -->
+
+    </div>
+  </section> <!-- ----------- FINE VEICOLI DISPONIBILI ------------ -->
+
+  <section id="noleggiati"> <!-- ------------ VEICOLI NOLEGGIATI ------------- -->
+    <div class="container">
+      <div class="veicoli-title">
+        <h2>Veicoli non disponibili (attualmente)</h2>
+      </div>
+
+      <div class="row">
+        <div class="card-container col-sm-12 col-md-6 col-lg-3">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Nome Mezzo</h5>
+              <p class="card-text">
+                Categoria: <br/>
+                Alimentazione: <br/>
+                Indirizzo: <br/>
+              </p>
+              <a href="./veicolo.html" class="btn btn-outline-primary">Scopri di più</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> <!-- ------------ FINE VEICOLI NOLEGGIATI ------------- -->
+
+  <footer>
+    <div class="social">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <ul class="list">
+      <li>
+        <a href="#">Privacy</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Contact Us</a>
+      </li>
+    </ul>
+
+    <p class="copyright">
+      Gruppo 4 Caldi neri @ 2024
+    </p>
+  </footer>
+
+  
 
 
 
 
-    <!-- --------------------------- FINE SECTION 1 ---------------------------- -->
 
 
 
@@ -143,20 +317,17 @@
 
 
 
-    <!-- ------------------------------- SCRIPT -------------------------------- -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    
-    <!-- ---------------------------- SCRIPT SWIPER ---------------------------- -->
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
 
-    <!-- ------------------------------- JS------------------------------- -->
-    <script src="js/homepage.js"></script>
 
-  </body>
+  <!-- ------------------------------- SCRIPT -------------------------------- -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"></script>
+  <!-- ---------------------------- SCRIPT SWIPER ---------------------------- -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- ------------------------------- JS------------------------------- -->
+  <script src="js/homepage.js"></script>
+</body>
+
 </html>
