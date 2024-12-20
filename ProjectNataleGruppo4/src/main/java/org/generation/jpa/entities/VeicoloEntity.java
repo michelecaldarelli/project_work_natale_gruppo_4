@@ -35,6 +35,9 @@ public class VeicoloEntity {
 	
 	
 
+	public VeicoloEntity() {
+	}
+	
 	public VeicoloEntity(String categoria, String alimentazione, String indirizzo, boolean disponibilita) {
 		this.categoria = categoria;
 		this.alimentazione = alimentazione;

@@ -2,7 +2,6 @@ package org.generation.jpa.entities;
 
 import java.util.Date;
 
-import org.generation.jpa.dtos.Ruolo;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

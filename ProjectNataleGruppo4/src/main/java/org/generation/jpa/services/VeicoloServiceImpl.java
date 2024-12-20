@@ -13,9 +13,13 @@ public class VeicoloServiceImpl implements VeicoloService{
 	
 	@Override
 	public VeicoloEntity postVeicolo(VeicoloEntity veicolo) {
-		
 		veicoloRepository.save(veicolo);
 		return veicolo;
+	}
+
+	@Override
+	public VeicoloEntity getVeicoloById(long id) {
+		return veicoloRepository.findVeicoloById(id);
 	}
 	
 }

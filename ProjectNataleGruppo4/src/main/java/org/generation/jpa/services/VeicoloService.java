@@ -7,4 +7,6 @@ import org.springframework.stereotype.Service;
 public interface VeicoloService {
 
 	VeicoloEntity postVeicolo(VeicoloEntity veicolo);
+	
+	VeicoloEntity getVeicoloById(long id);
 }

@@ -6,10 +6,5 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface VeicoloRepository extends JpaRepository<VeicoloEntity, Long> {
 	
-	
-//	String categoria, String alimentazione, String indirizzo, boolean disp
-	
-	//prova
-//	prova
-//	proova
+	VeicoloEntity findVeicoloById(long id);
 }

@@ -1,4 +1,4 @@
-package org.generation.jpa.dtos;
+package org.generation.jpa.entities;
 
 public enum Ruolo {
 	ADMIN,
