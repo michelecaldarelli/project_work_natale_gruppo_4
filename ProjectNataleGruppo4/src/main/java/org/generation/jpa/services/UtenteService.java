@@ -11,4 +11,6 @@ public interface UtenteService {
 	public List<UtenteEntity> getAll();
 	
 	public UtenteEntity getByEmail(String email);
+	
+	
 }
