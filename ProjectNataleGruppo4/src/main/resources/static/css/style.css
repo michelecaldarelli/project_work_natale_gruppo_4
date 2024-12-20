@@ -195,6 +195,11 @@ h1 {
     color: #005478;
 }
 
+.card {
+    margin: 10px;
+}
+
+
 /* --------------------------- VEICOLI NOLEGGIATI -------------------------- */
 
 #noleggiati {
