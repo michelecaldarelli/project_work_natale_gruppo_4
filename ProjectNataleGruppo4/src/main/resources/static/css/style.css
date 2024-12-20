@@ -23,7 +23,7 @@ h6 {
 }
 
 h5 {
-    margin: 10px auto;
+    margin: 10px;
 }
 
 p {
@@ -105,7 +105,7 @@ h1 {
 }
 
 .swiper {
-  width: 100%;
+  width: 80%;
   height: 100%;
 }
 
@@ -153,6 +153,18 @@ h1 {
   stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
+}
+
+#carousel-description {
+    margin-top: 10px;
+    color: #189ddc;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 /* ----------------------------- NEUTRO ----------------------------- */
@@ -274,6 +286,10 @@ footer ul li a:hover {
     color: #f8f9fa;
 }
 
+/* ------------------------------ SCHERMI MEDI ------------------------------ */
+@media screen and (min-width:768px) {
+
+}
 /* ----------------------------- SCHERMI GRANDI ----------------------------- */
 @media screen and (min-width: 992px) {
   .welcome-img {
@@ -287,5 +303,11 @@ footer ul li a:hover {
 
   .welcome-text-title {
     text-align: left;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
   }
 }
