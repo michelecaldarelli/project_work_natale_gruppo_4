@@ -106,7 +106,7 @@ fetch('http://localhost:8099/api/veicolo')
             </div>
           </div>
         `;
-        if(visualizzati == 4){
+        if(visualizzati >= data.length){
           break;
         }
       }
