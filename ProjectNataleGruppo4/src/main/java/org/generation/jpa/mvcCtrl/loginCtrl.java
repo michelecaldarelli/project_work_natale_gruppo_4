@@ -6,8 +6,10 @@ import org.generation.jpa.services.UtenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.SessionAttributes;
@@ -17,6 +19,7 @@ import jakarta.servlet.http.HttpSession;
 //@RequestMapping("/formLoginBackend.html")
 //@SessionAttributes("currentUser")
 @Controller
+@CrossOrigin
 public class loginCtrl {
 	
 	@Autowired
@@ -32,22 +35,30 @@ public class loginCtrl {
 	}
 	
 	@PostMapping("/login")
-	public ResponseEntity<UtenteEntity> login(UtenteEntity utente) {
+	public ResponseEntity<String> login(@RequestBody UtenteEntity utente) {
 		
 		UtenteEntity utenteTrovato = utenteService.getByEmail(utente.getEmail());
-		System.out.println(utenteTrovato.getEmail());
-		return ResponseEntity.ok(utente);	
-		
-//		UtenteEntity utenteTrovato = utenteService.getByEmail(utente.getEmail());
-//		if (utenteTrovato.getEmail() != null) {
-//			if (utente.getPassword().equals(utenteTrovato.getPassword())) {
-//				return ResponseEntity.ok("Utente loggato");
-//			}else {
-//				return ResponseEntity.ok("Password sbagliata");
-//			}
-//		}else {
-//			return ResponseEntity.ok("Email sbagliata");
-//		}
+		if (utenteTrovato != null) {
+			if (utente.getPassword().equals(utenteTrovato.getPassword())) {
+				session.setAttribute("user", utenteTrovato);
+				return ResponseEntity.ok("Utente loggato");
+			}else {
+				return ResponseEntity.ok("Password sbagliata");
+			}
+		}else {
+			return ResponseEntity.ok("Email sbagliata");
+		}
+	}
+	
+	@GetMapping("/logout")
+	public String logout() {
+		session.invalidate();
+		return "sloggato ao";
+	}
+	
+	@GetMapping("/userData")
+	public UtenteEntity getUserData() {
+		return (UtenteEntity) session.getAttribute("user");
 	}
 	
 	

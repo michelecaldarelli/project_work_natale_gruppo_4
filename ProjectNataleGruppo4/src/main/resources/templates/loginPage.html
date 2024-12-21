@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h1 class="castrese d-none">Ciao Castrese</h1>
     <div class="container">
         <h2 class="mb-4">Login</h2>
         <p>Accetta qualunque Nome ed Email</p>
@@ -28,28 +29,45 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <script>
+
     const form = document.querySelector('form');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const email = document.querySelector('#email').value;
         const password = document.querySelector('#password').value;
+        console.log(email, password);
+        console.log(JSON.stringify({ "email": email, "password" : password }));
+        
         fetch('/login', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json', // Specifica che stai inviando JSON
+                'Accept': 'application/json'
             },
-            body: JSON.stringify({ email, password })
-        }).then(res => res.json())
+            body: JSON.stringify({ "email": email, "password" : password })
+        })
+            .then(res => res.json())
             .then(data => {
-
                 console.log(data);
+            })
+//                 fetch('http://localhost:8099/userData')
+//   .then(response => response.json())
+//   .then(data => {
+//     if(data != null) {
+//         console.log(data);
+//         const h1 = document.querySelector(".castrese");
+//         h1.classList.remove("d-none");
+//     }
+
+//   .catch(error => console.error('Error:', error));
+
+//                 console.log(data);
                 // if (data.success) {
                 //     window.location.href = '/homepage.html';
                 // } else {
                 //     alert('Login failed');
                 // }
             });
-    });
 </script>
 
 </html>
