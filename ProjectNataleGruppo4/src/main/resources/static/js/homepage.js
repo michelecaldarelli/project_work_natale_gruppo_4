@@ -49,10 +49,8 @@ const veicoliDisponibili = document.querySelector('.cards-disponibili');
 fetch('http://localhost:8099/api/veicolo')
   .then(response => response.json())
   .then(data => {
-    let visualizzati = 0;
     for(let i = 0; i<data.length; i++){
       if(data[i].disponibilita) {
-        visualizzati++;
         veicoliDisponibili.innerHTML += `
           <div class="card-container col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center">
             <div class="card" style="width: 15rem;">
@@ -69,9 +67,6 @@ fetch('http://localhost:8099/api/veicolo')
             </div>
           </div>
         `;
-        if(visualizzati == 4){
-          break;
-        }
       }
     }
   })
@@ -86,10 +81,8 @@ const veicoliNoleggiati = document.querySelector('.cards-noleggiati');
 fetch('http://localhost:8099/api/veicolo')
   .then(response => response.json())
   .then(data => {
-    let visualizzati = 0;
     for(let i = 0; i<data.length; i++){
       if(!data[i].disponibilita) {
-        visualizzati++;
         veicoliNoleggiati.innerHTML += `
           <div class="card-container col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center">
             <div class="card" style="width: 15rem;">
@@ -106,9 +99,6 @@ fetch('http://localhost:8099/api/veicolo')
             </div>
           </div>
         `;
-        if(visualizzati >= data.length){
-          break;
-        }
       }
     }
   })
