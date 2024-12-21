@@ -1,0 +1,357 @@
+/* ----------------------------- REGOLE GENERALI ---------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 96%;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", serif;
+  color: #005478;
+}
+
+p {
+  font-family: "Inter", serif;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+/* --------------------------------- NAVBAR --------------------------------- */
+
+.navbar {
+    border-bottom: 2px solid #005478;
+}
+
+.navimg {
+  width: 50px;
+  margin-right: 5px;
+}
+
+.nav-link {
+  color: #005478;
+}
+
+/* --------------------------------- SECTION -------------------------------- */
+
+#welcome {
+  background-color: #007bff;
+  border-top: 2px solid #005478;
+  border-bottom: 2px solid #005478;
+  margin-top: 66px;
+}
+
+.welcome-img img {
+  width: 200px;
+  border: 2px solid #005478;
+  border-radius: 100px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.Easy {
+  color: #005478;
+}
+.Share {
+  color: #189ddc;
+}
+
+.welcome-text-title {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.welcome-text p {
+  color: #f8f9fa;
+}
+
+h1 {
+  color: #f8f9fa;
+}
+
+/* -------------------------------- CAROSELLO ------------------------------- */
+
+#inner-carousel {
+  position: relative;
+  height: 100%;
+  background: #f8f9fa;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 80%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+#carousel-description {
+  margin-top: 10px;
+  color: #189ddc;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* ----------------------------- NEUTRO ----------------------------- */
+
+#neutro {
+  padding-top: 20px;
+  background: #f8f9fa;
+}
+
+.neutro-title {
+  color: #005478;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.icon {
+  color: #007bff;
+  text-align: center;
+}
+
+.icon p {
+  color: #189ddc;
+  font-size: 24px;
+}
+
+/* --------------------------- VEICOLI DISPONIBILI -------------------------- */
+
+#disponibili {
+  background-color: #f8f9fa;
+  padding-top: 20px;
+}
+
+.veicoli-title {
+  border-bottom: 2px dashed #005478;
+  color: #005478;
+  margin: 10px;
+}
+
+.card-title {
+  color: #005478;
+}
+
+.card {
+  margin: 10px;
+}
+
+/* --------------------------- VEICOLI NOLEGGIATI -------------------------- */
+
+#noleggiati {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+/* --------------------------------- FOOTER --------------------------------- */
+footer {
+  background-color: #007bff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  padding: 50px 0;
+  text-decoration: none;
+}
+
+.social {
+  text-align: center;
+  padding-bottom: 25px;
+  color: #f8f9fa;
+}
+.social a {
+  font-size: 24px;
+  color: inherit;
+  border: 1px solid #f8f9fa;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75;
+}
+
+.social a:hover {
+  opacity: 0.9;
+}
+
+footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+footer ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+  color: #f8f9fa;
+}
+
+footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+footer ul li a:hover {
+  opacity: 1;
+}
+
+.copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #f8f9fa;
+}
+
+/* ------------------------------ VEICOLO.HTML ------------------------------ */
+
+#hero {
+  height: 26vh; /* imposto l'altezza al 100% del viewport */
+  background-image: url('../images/hero.jpg');
+  background-size: cover; /* copre l'intera area */
+  background-position: center center; /* posiziona l'immagine al centro. Corrsiponde a background-position-x: center, background-position-y: center */
+  background-repeat: no-repeat; /* non ripete l'immagine */
+  display: flex; /* per poter utilizzare la proprietà justify-content */
+  justify-content: center; /* per centrare i figli orizzontalmente*/
+  align-items: center; /* per centrare i figli verticalmente */
+  text-align: center; /* per centrare il testo */
+  margin-top: 68px;
+}
+
+#veicolo {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+
+
+
+
+/* ------------------------------ SCHERMI MEDI ------------------------------ */
+
+@media screen and (min-width: 768px) {
+  #welcome {
+    margin-top: 68px;
+  }
+
+  #hero {
+    height: 40vh;
+    margin-top: 70px;
+  }
+
+  .card-image {
+    display: flex;
+    align-items: center;
+  }
+}
+/* ----------------------------- SCHERMI GRANDI ----------------------------- */
+
+@media screen and (min-width: 992px) {
+  #welcome {
+    margin-top: 71px;
+  }
+
+  .welcome-img {
+    display: flex;
+    align-items: center;
+  }
+
+  .welcome-text {
+    margin: 30px auto;
+  }
+
+  .welcome-text-title {
+    text-align: left;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #hero {
+    height: 87vh;
+    margin-top: 73px;
+  }
+
+  .card-image {
+    display: flex;
+    align-items: center;
+  }
+}

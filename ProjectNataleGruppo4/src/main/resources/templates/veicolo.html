@@ -42,22 +42,21 @@
           aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <img class="navimg" src="images/EasyShareMacchinaQuadrata.png" alt="" srcset="">
-        <a class="navbar-brand" href="homepage.html">
+        <a class="navbar-brand d-flex align-items-center" href="homepage.html">
+          <img class="navimg" src="images/EasyShareMacchinaQuadrata.png" alt="" srcset="" >
           <h2><span class="Easy">Easy</span><span class="Share">Share</span></h2>
         </a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/pannello.html">Pannello</a>
+              <a class="nav-link active" aria-current="page" href="pannello.html">Pannello</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#disponibili">Disponibilità</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <button class="btn btn-primary" type="submit">Accedi</button>
-          </form>
+          <div class="login-name"></div>
+          <button class="btn btn-primary btn-login">Accedi</button>
         </div>
       </div>
     </nav>
@@ -109,7 +108,7 @@
                           Alimentazione: <br />
                           Indirizzo: <br />
                         </p>
-                        <a href="./veicolo.html" class="btn btn-outline-primary">Scopri di più</a>
+                        <a href="veicolo.html" class="btn btn-outline-primary">Scopri di più</a>
                       </div>
                     </div>
                   </div>
@@ -172,7 +171,8 @@
     crossorigin="anonymous"></script>
   <!-- ---------------------------- SCRIPT SWIPER ---------------------------- -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./js/veicolo.js"></script>
+  <script src="js/veicolo.js"></script>
+  <script src="js/common-login.js"></script>
 </body>
 
 </html>

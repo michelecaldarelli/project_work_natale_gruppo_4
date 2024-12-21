@@ -31,18 +31,17 @@ public class loginCtrl {
 	UtenteService utenteService;
 	
 	
-	@GetMapping("/login")
-	public String loginpage() {
-		return "loginPage";
-	}
-	
 	@PostMapping("/login")
 	public ResponseEntity<?> login(@RequestBody UtenteEntity utente) {
 	    UtenteEntity utenteTrovato = utenteService.getByEmail(utente.getEmail());
 	    if (utenteTrovato != null) {
 	        if (utente.getPassword().equals(utenteTrovato.getPassword())) {
-	            session.setAttribute("user", utenteTrovato);
-	            System.out.println(session.getAttribute("user"));
+	            UtenteDto utenteSalvato = new UtenteDto(
+	            		utenteTrovato.getNome(),
+	            		utenteTrovato.getEmail(),
+	            		utenteTrovato.getRuolo());
+	            
+	        	session.setAttribute("user", utenteSalvato);
 	            return ResponseEntity.ok().body(Map.of("message", "Utente loggato"));
 	        } else {
 	            return ResponseEntity.badRequest().body(Map.of("message", "Password sbagliata"));
@@ -53,15 +52,15 @@ public class loginCtrl {
 	}
 	
 	@GetMapping("/logout")
-	public String logout() {
-		session.invalidate();
-		return "sloggato ao";
+	public ResponseEntity<?> logout() {
+		session.setAttribute("user", new UtenteDto());
+		return ResponseEntity.ok().body(Map.of("message", "sloggato ao"));
 	}
 	
 	@GetMapping("/login/userData")
 	public ResponseEntity<?> getUserData() {
 		try {
-			UtenteEntity u = (UtenteEntity) session.getAttribute("user");
+			UtenteDto u = (UtenteDto) session.getAttribute("user");
 			if (u == null) {
 	            return ResponseEntity.status(404).body(Map.of("errore", "Nessun utente in sessione"));
 	        }
