@@ -96,6 +96,14 @@ public class UtenteEntity {
 	public void setRuolo(Ruolo ruolo) {
 		this.ruolo = ruolo;
 	}
+
+	@Override
+	public String toString() {
+		return "UtenteEntity [utente_id=" + utente_id + ", nome=" + nome + ", cognome=" + cognome + ", dataNascita="
+				+ dataNascita + ", email=" + email + ", password=" + password + ", ruolo=" + ruolo + "]";
+	}
+	
+	
 	
 	
 	

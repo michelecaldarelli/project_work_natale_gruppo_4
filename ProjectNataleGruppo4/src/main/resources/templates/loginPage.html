@@ -41,15 +41,30 @@
         fetch('/login', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json', // Specifica che stai inviando JSON
-                'Accept': 'application/json'
+                'Content-Type': 'application/json' // Specifica che stai inviando JSON
             },
             body: JSON.stringify({ "email": email, "password" : password })
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-            })
+                fetch('/login/userData')
+                    .then(response => response.json())
+                    .then(data => {
+                        if(data != null) {
+                            console.log("non è null zio");
+                            console.log(data);
+                            const h1 = document.querySelector(".castrese");
+                            h1.classList.remove("d-none");
+                        }
+                        else {
+                            console.log("è null");
+                            
+                        }
+                    })
+            });
+    });
+
 //                 fetch('http://localhost:8099/userData')
 //   .then(response => response.json())
 //   .then(data => {
@@ -67,7 +82,7 @@
                 // } else {
                 //     alert('Login failed');
                 // }
-            });
+            
 </script>
 
 </html>

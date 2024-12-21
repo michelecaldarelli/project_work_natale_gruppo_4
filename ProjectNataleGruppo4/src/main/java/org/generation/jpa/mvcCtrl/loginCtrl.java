@@ -1,5 +1,7 @@
 package org.generation.jpa.mvcCtrl;
 
+import java.util.Map;
+
 import org.generation.jpa.dtos.UtenteDto;
 import org.generation.jpa.entities.UtenteEntity;
 import org.generation.jpa.services.UtenteService;
@@ -35,19 +37,19 @@ public class loginCtrl {
 	}
 	
 	@PostMapping("/login")
-	public ResponseEntity<String> login(@RequestBody UtenteEntity utente) {
-		
-		UtenteEntity utenteTrovato = utenteService.getByEmail(utente.getEmail());
-		if (utenteTrovato != null) {
-			if (utente.getPassword().equals(utenteTrovato.getPassword())) {
-				session.setAttribute("user", utenteTrovato);
-				return ResponseEntity.ok("Utente loggato");
-			}else {
-				return ResponseEntity.ok("Password sbagliata");
-			}
-		}else {
-			return ResponseEntity.ok("Email sbagliata");
-		}
+	public ResponseEntity<?> login(@RequestBody UtenteEntity utente) {
+	    UtenteEntity utenteTrovato = utenteService.getByEmail(utente.getEmail());
+	    if (utenteTrovato != null) {
+	        if (utente.getPassword().equals(utenteTrovato.getPassword())) {
+	            session.setAttribute("user", utenteTrovato);
+	            System.out.println(session.getAttribute("user"));
+	            return ResponseEntity.ok().body(Map.of("message", "Utente loggato"));
+	        } else {
+	            return ResponseEntity.badRequest().body(Map.of("message", "Password sbagliata"));
+	        }
+	    } else {
+	        return ResponseEntity.badRequest().body(Map.of("message", "Email sbagliata"));
+	    }
 	}
 	
 	@GetMapping("/logout")
@@ -56,11 +58,22 @@ public class loginCtrl {
 		return "sloggato ao";
 	}
 	
-	@GetMapping("/userData")
-	public UtenteEntity getUserData() {
-		return (UtenteEntity) session.getAttribute("user");
+	@GetMapping("/login/userData")
+	public ResponseEntity<?> getUserData() {
+		try {
+			UtenteEntity u = (UtenteEntity) session.getAttribute("user");
+			if (u == null) {
+	            return ResponseEntity.status(404).body(Map.of("errore", "Nessun utente in sessione"));
+	        }
+			return ResponseEntity.ok(u);
+		}
+		catch (Error e){
+			return ResponseEntity.badRequest().body(Map.of("errore", "ciao"));
+		}
+		
 	}
 	
+	// session.getAttribute("user")
 	
 	
 	
