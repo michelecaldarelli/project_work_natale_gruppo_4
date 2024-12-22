@@ -44,10 +44,10 @@ public class loginCtrl {
 	        	session.setAttribute("user", utenteSalvato);
 	            return ResponseEntity.ok().body(Map.of("message", "Utente loggato"));
 	        } else {
-	            return ResponseEntity.badRequest().body(Map.of("message", "Password sbagliata"));
+	            return ResponseEntity.badRequest().body(Map.of("message", "Password errata"));
 	        }
 	    } else {
-	        return ResponseEntity.badRequest().body(Map.of("message", "Email sbagliata"));
+	        return ResponseEntity.badRequest().body(Map.of("message", "Non esiste un account legato a questa email"));
 	    }
 	}
 	

@@ -2,7 +2,10 @@ const loginName = document.querySelector(".login-name");
 const btnLogin = document.querySelector(".btn-login");
 
 async function checkLogin() {
-    fetch('/login/userData')
+    if(window.location.pathname != "/login" || btnLogin.textContent === "Logout"){
+        btnLogin.classList.remove("d-none");
+    }
+    fetch('http://localhost:8099/login/userData')
         .then(res => {
             if (res.status === 200) {
             return res.json();
@@ -13,16 +16,16 @@ async function checkLogin() {
             console.log(data);
             if(data.nome != null) {
                 loginName.classList.remove("d-none");
-
-                console.log("siamo qui");
                 loginName.innerHTML = `${data.ruolo}: ${data.nome}`;
 
                 btnLogin.textContent="Logout";
+                btnLogin.classList.remove("d-none");
             }
             else {
-                console.log("ao");
-                
                 loginName.classList.add("d-none");
+                if(window.location.pathname === "/login") {
+                    btnLogin.classList.add("d-none");
+                }
                 btnLogin.textContent="Accedi";
             }
         })
