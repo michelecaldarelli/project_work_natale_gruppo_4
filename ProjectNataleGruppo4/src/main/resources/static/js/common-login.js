@@ -1,6 +1,7 @@
 const loginName = document.querySelector(".login-name");
 const btnLogin = document.querySelector(".btn-login");
 
+/* --------------------- FUNZIONE CHE CONTROLLA CHI E' LOGGATO -------------------- */
 async function checkLogin() {
     if(window.location.pathname != "/login" || btnLogin.textContent === "Logout"){
         btnLogin.classList.remove("d-none");
@@ -34,13 +35,13 @@ async function checkLogin() {
 
 checkLogin();
 
-
+/* -------------------------- BOTTONE LOGIN/LOGOUT -------------------------- */
 btnLogin.addEventListener('click', e =>{
     if(btnLogin.innerHTML === "Logout") {
         fetch('/logout')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                window.location.href='./homepage.html';
                 checkLogin();
         })
     }

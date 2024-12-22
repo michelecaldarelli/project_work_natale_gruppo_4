@@ -1,6 +1,7 @@
 package org.generation.jpa.mvcCtrl;
 
 import org.generation.jpa.dtos.UtenteDto;
+import org.generation.jpa.entities.Ruolo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -27,7 +28,11 @@ public class HtmlCtrl {
 	
 	@GetMapping("/pannello")
 	public String pannello() {
-		return "pannello";
+		UtenteDto u = (UtenteDto) session.getAttribute("user");
+		if(u != null && u.getRuolo()!= null && u.getRuolo().equals(Ruolo.ADMIN)) {
+			return "pannello";
+		}
+		return "redirect:/errore";
 	}
 	@GetMapping("/pannello.html")
 	public String pannelloRedirect() {
@@ -54,6 +59,16 @@ public class HtmlCtrl {
 			return "redirect:/home";
 		}
 		return "login";
+	}
+	
+	@GetMapping("/errore.html")
+	public String erroreRedirect() {
+		return "redirect:/errore";
+	}
+	
+	@GetMapping("/errore")
+	public String errore() {
+		return "errore";
 	}
 
 }
