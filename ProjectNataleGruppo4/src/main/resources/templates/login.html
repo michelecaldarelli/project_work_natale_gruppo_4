@@ -27,7 +27,8 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
     <!-- ------------------------------ STYLE CSS ------------------------------ -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css"/>
+    
 </head>
 
 <body>
@@ -59,7 +60,7 @@
     </header> <!-- ----------------------------- FINE NAVBAR ----------------------------- -->
 
     
-    <section id="form-section">
+    <!-- <section id="form-section">
         <div class="container pt-5">
             <h2 class="mb-4 pt-5">Login</h2>
             <p>Accetta qualunque Nome ed Email</p>
@@ -73,7 +74,45 @@
             </form>
         </div>
         <div class="error-message d-none"></div>
+    </section> -->
+
+    <section id="form-section"> 
+      <div class="container pt-5">
+        <h2 class="mb-4 pt-5">Login</h2>
+        <p>Accetta qualunque Nome ed Email</p>
+        <p>Prova ad inserire il nome in minuscolo e la mail maiuscola</p>
+        <form id="loginForm">
+          <div class="input_box">
+            <label for="email" class="form-label">Email:</label>
+            <input 
+              type="text" 
+              name="email" 
+              id="email" 
+              class="mb-1 form-control" 
+              placeholder="Inserisci indirizzo email" 
+              required 
+            />
+          </div>
+    
+          <div class="input_box">
+            <label for="password" class="form-label">Password:</label>
+            <input 
+              type="password" 
+              name="password" 
+              id="password" 
+              class="mb-1 form-control" 
+              placeholder="Inserisci la password" 
+              required 
+            />
+          </div>
+    
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+      <div class="error-message d-none"></div>
     </section>
+
+
 </body>
 
 

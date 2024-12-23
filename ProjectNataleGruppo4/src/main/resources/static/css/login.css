@@ -1,0 +1,145 @@
+/* ----------------------------- REGOLE GENERALI ---------------------------- */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .container {
+    width: 96%;
+    margin: 0 auto;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", serif;
+    color: #005478;
+  }
+  
+  p {
+    font-family: "Inter", serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #626cd6;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* --------------------------------- NAVBAR --------------------------------- */
+  .navbar {
+    border-bottom: 2px solid #005478;
+  }
+  
+  .navimg {
+    width: 50px;
+    margin-right: 5px;
+  }
+  
+  .nav-link {
+    color: #005478;
+  }
+  
+  .nav-link:hover {
+    color: #007bff;
+  }
+  
+  .login-name {
+    color: #007bff;
+  }
+  
+  .Easy {
+    color: #005478;
+  }
+  
+  .Share {
+    color: #189ddc;
+  }
+  
+  /* -------------------------------- SECTION -------------------------------- */
+  #form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .login_form {
+    width: 100%;
+    max-width: 435px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 41px 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .login_form h3 {
+    font-size: 20px;
+    text-align: center;
+    color: #005478;
+  }
+  
+  .login_form p {
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .input_box label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .input_box input {
+    width: 100%;
+    height: 57px;
+    border: 1px solid #dadaf2;
+    border-radius: 5px;
+    outline: none;
+    background: #f8f8fb;
+    font-size: 17px;
+    padding: 0px 20px;
+    margin-bottom: 25px;
+    transition: 0.2s ease;
+  }
+  
+  .input_box input:focus {
+    border-color: #626cd6;
+  }
+
+  form button {
+    width: 100%;
+    height: 56px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #0d6efd;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 28px;
+    transition: 0.3s ease;
+  }
+  
+  form button:hover {
+    background: #4954d0;
+  }
