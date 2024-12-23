@@ -59,13 +59,64 @@
     </header> <!-- ----------------------------- FINE NAVBAR ----------------------------- -->
 
     
-    <h1 class="pt-5 mt-5 d-block" style="color: black">Pannello</h1>
-</body>
+<h1 class="pt-5 mt-5 d-block justi" style="color: black">Pannello</h1>
 
+
+<div class="container mt-5">
+  <form action="/pannello"  class="pannello" method="post">
+      <div class="mb-3">
+          <label for="categoria-veicolo" class="form-label">Categoria Veicolo</label>
+          <select id="categoria-veicolo" name="categoria-veicolo" class="form-control" required>
+              <option value="macchina">MACCHINA</option>
+              <option value="moto">MOTO</option>
+              <option value="bicicletta">BICICLETTA</option>
+          </select>
+      </div>
+
+      <div class="mb-3">
+          <label for="marca" class="form-label">Marca</label>
+          <input type="text" class="form-control" id="marca" name="marca" required>
+      </div>
+
+      <div class="mb-3">
+          <label for="modello" class="form-label">Modello</label>
+          <input type="text" class="form-control" id="modello" name="modello" required>
+      </div>
+
+      <div class="mb-3">
+          <label for="descrizione" class="form-label">Descrizione</label>
+          <textarea class="form-control" id="descrizione" name="descrizione" required></textarea>
+      </div>
+
+      
+      <div class="mb-3">
+          <label for="alimentazione" class="form-label">Alimentazione</label>
+          <input type="text" class="form-control" id="alimentazione" name="alimentazione" required>
+      </div>
+
+      <div class="mb-3">
+          <label for="indirizzo" class="form-label">Indirizzo</label>
+          <input type="text" class="form-control" id="indirizzo" name="indirizzo">
+      </div>
+
+      <!-- <div class="mb-3">
+          <label for="immagine" class="form-label">Upload Immagine</label>
+          <input type="file" class="form-control" id="immagine" name="immagine">
+      </div> -->
+
+      
+
+      <button type="submit" class="btn btn-primary">Inserisci Veicolo</button>
+  </form>
+</div>
+
+
+</body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <script src="js/login.js"></script>
 <script src="js/common-login.js"></script>
+<script src="js/pannello.js"></script>
 
 </html>

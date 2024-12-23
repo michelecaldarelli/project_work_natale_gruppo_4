@@ -62,7 +62,9 @@ fetch('http://localhost:8099/api/veicolo')
                   Alimentazione: ${data[i].alimentazione}<br />
                   Indirizzo: ${data[i].indirizzo}<br />
                 </p>
-                <a href="veicolo.html" class="btn btn-outline-primary">Scopri di più</a>
+
+                <a  id="${data[i].id}" class="btn btn-outline-primary">Scopri di più</a>
+
               </div>
             </div>
           </div>
@@ -73,33 +75,45 @@ fetch('http://localhost:8099/api/veicolo')
   .catch(error => console.error('Error:', error));
 
 
-
+veicoliDisponibili.addEventListener('click', e => {
+  if (e.target.tagName == "A") {
+    localStorage.setItem("idVeicolo", e.target.id);
+    window.location.href='./veicolo.html';
+  }
+})
 /* ------------------------ CARDS VEICOLI NOLEGGIATI ----------------------- */
 
 const veicoliNoleggiati = document.querySelector('.cards-noleggiati');
 
 fetch('http://localhost:8099/api/veicolo')
-  .then(response => response.json())
-  .then(data => {
-    for(let i = 0; i<data.length; i++){
-      if(!data[i].disponibilita) {
-        veicoliNoleggiati.innerHTML += `
-          <div class="card-container col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center">
-            <div class="card" style="width: 15rem;">
-              <img class="card-img-top" src="images/img-database/${data[i].immagineVeicolo}" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">${data[i].marca} - ${data[i].modello}</h5>
-                <p class="card-text">
-                  Categoria: ${data[i].categoria}<br />
-                  Alimentazione: ${data[i].alimentazione}<br />
-                  Indirizzo: ${data[i].indirizzo}<br />
-                </p>
-                <a href="veicolo.html" class="btn btn-outline-primary">Scopri di più</a>
-              </div>
-            </div>
-          </div>
-        `;
-      }
+.then(response => response.json())
+.then(data => {
+  for(let i = 0; i<data.length; i++){
+    if(!data[i].disponibilita) {
+      veicoliNoleggiati.innerHTML += `
+      <div class="card-container col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center">
+      <div class="card" style="width: 15rem;">
+      <img class="card-img-top" src="images/img-database/${data[i].immagineVeicolo}" alt="Card image cap">
+      <div class="card-body">
+      <h5 class="card-title">${data[i].marca} - ${data[i].modello}</h5>
+      <p class="card-text">
+      Categoria: ${data[i].categoria}<br />
+      Alimentazione: ${data[i].alimentazione}<br />
+      Indirizzo: ${data[i].indirizzo}<br />
+      </p>
+      <a  id="${data[i].id}" class="btn btn-outline-primary">Scopri di più</a>
+      </div>
+      </div>
+      </div>
+      `;
     }
-  })
-  .catch(error => console.error('Error:', error));
+  }
+})
+.catch(error => console.error('Error:', error));
+
+veicoliNoleggiati.addEventListener('click', e => {
+  if (e.target.tagName == "A") {
+    localStorage.setItem("idVeicolo", e.target.id);
+    window.location.href='./veicolo.html';
+  }
+})

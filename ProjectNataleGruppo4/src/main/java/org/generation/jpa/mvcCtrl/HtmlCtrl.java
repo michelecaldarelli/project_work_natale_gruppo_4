@@ -28,11 +28,12 @@ public class HtmlCtrl {
 	
 	@GetMapping("/pannello")
 	public String pannello() {
-		UtenteDto u = (UtenteDto) session.getAttribute("user");
-		if(u != null && u.getRuolo()!= null && u.getRuolo().equals(Ruolo.ADMIN)) {
-			return "pannello";
-		}
-		return "redirect:/errore";
+//		UtenteDto u = (UtenteDto) session.getAttribute("user");
+//		if(u != null && u.getRuolo()!= null && u.getRuolo().equals(Ruolo.ADMIN)) {
+//			return "pannello.html";
+//		}
+//		return "redirect:/errore";
+		return "pannello.html";
 	}
 	@GetMapping("/pannello.html")
 	public String pannelloRedirect() {
@@ -43,6 +44,7 @@ public class HtmlCtrl {
 	public String veicolo() {
 		return "veicolo";
 	}
+	
 	@GetMapping("/veicolo.html")
 	public String veicoloRedirect() {
 		return "redirect:/pagina-veicolo";

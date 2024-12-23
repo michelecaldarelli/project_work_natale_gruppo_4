@@ -30,6 +30,7 @@ p {
   text-decoration: none;
   color: white;
 }
+
 /* --------------------------------- NAVBAR --------------------------------- */
 
 .navbar {
@@ -43,6 +44,11 @@ p {
 
 .nav-link {
   color: #005478;
+}
+
+.login-name {
+  color: #007bff;
+  margin-bottom: 10px;
 }
 
 /* --------------------------------- SECTION -------------------------------- */
@@ -80,7 +86,7 @@ p {
   color: #f8f9fa;
 }
 
-h1 {
+#welcome h1 {
   color: #f8f9fa;
 }
 
@@ -280,27 +286,17 @@ footer ul li a:hover {
 
 /* ------------------------------ VEICOLO.HTML ------------------------------ */
 
-#hero {
-  height: 26vh; /* imposto l'altezza al 100% del viewport */
-  background-image: url('../images/hero.jpg');
-  background-size: cover; /* copre l'intera area */
-  background-position: center center; /* posiziona l'immagine al centro. Corrsiponde a background-position-x: center, background-position-y: center */
-  background-repeat: no-repeat; /* non ripete l'immagine */
-  display: flex; /* per poter utilizzare la proprietà justify-content */
-  justify-content: center; /* per centrare i figli orizzontalmente*/
-  align-items: center; /* per centrare i figli verticalmente */
-  text-align: center; /* per centrare il testo */
-  margin-top: 68px;
-}
-
 #veicolo {
   background-color: #f8f9fa;
   padding: 20px 0;
+  margin-top: 75px;
 }
 
+#map { height: 180px; }
 
-
-
+.noleggia-btn {
+  margin-bottom: 20px;
+}
 
 /* ------------------------------ SCHERMI MEDI ------------------------------ */
 
@@ -309,15 +305,6 @@ footer ul li a:hover {
     margin-top: 68px;
   }
 
-  #hero {
-    height: 40vh;
-    margin-top: 70px;
-  }
-
-  .card-image {
-    display: flex;
-    align-items: center;
-  }
 }
 /* ----------------------------- SCHERMI GRANDI ----------------------------- */
 
@@ -345,13 +332,10 @@ footer ul li a:hover {
     justify-content: center;
   }
 
-  #hero {
-    height: 87vh;
-    margin-top: 73px;
+  .login-name {
+    color: #007bff;
+    margin-right: 15px;
+    margin-bottom: 0;
   }
 
-  .card-image {
-    display: flex;
-    align-items: center;
-  }
 }
