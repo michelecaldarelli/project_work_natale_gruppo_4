@@ -51,6 +51,17 @@ p {
   margin-bottom: 10px;
 }
 
+.Easy {
+  color: #005478;
+}
+.Share {
+  color: #189ddc;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
 /* --------------------------------- SECTION -------------------------------- */
 
 #welcome {
@@ -68,13 +79,6 @@ p {
   height: auto;
   display: block;
   margin: 20px auto;
-}
-
-.Easy {
-  color: #005478;
-}
-.Share {
-  color: #189ddc;
 }
 
 .welcome-text-title {
@@ -290,6 +294,9 @@ footer ul li a:hover {
   background-color: #f8f9fa;
   padding: 20px 0;
   margin-top: 75px;
+  min-height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: column;
 }
 
 #map { height: 180px; }

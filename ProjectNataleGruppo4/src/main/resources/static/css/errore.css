@@ -1,0 +1,83 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+/* --------------------------------- NAVBAR --------------------------------- */
+.navbar {
+  border-bottom: 2px solid #005478;
+}
+
+.navimg {
+  width: 50px;
+  margin-right: 5px;
+}
+
+.nav-link {
+  color: #005478;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.login-name {
+  color: #007bff;
+}
+
+.Easy {
+  color: #005478;
+}
+
+.Share {
+  color: #189ddc;
+}
+
+/* -------------------------------- CONTENT -------------------------------- */
+.content {
+  display: flex;
+  min-height: 100vh; /* Assicura che il contenuto occupi almeno tutta l'altezza visibile */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.container-errore {
+  width: 100%;
+  max-width: 640px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.messaggio-di-errore {
+  font-size: 1.25rem; /* Equivalente a fs-4 in Bootstrap */
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.button-esci {
+  width: 100%; /* Responsive full width per dispositivi più piccoli */
+  max-width: 300px;
+  background-color: #cf1508;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1rem; /* Equivalente a fs-5 in Bootstrap */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-esci:hover {
+  background-color: #a10e06;
+  text-decoration: underline;
+}
