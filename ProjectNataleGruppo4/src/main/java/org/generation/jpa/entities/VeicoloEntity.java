@@ -129,6 +129,16 @@ public class VeicoloEntity {
 		this.disponibilita = disponibilita;
 		this.immagineVeicolo = immagineVeicolo;
 	}
+
+
+	@Override
+	public String toString() {
+		return "VeicoloEntity [id=" + id + ", marca=" + marca + ", modello=" + modello + ", categoria=" + categoria
+				+ ", descrizione=" + descrizione + ", alimentazione=" + alimentazione + ", indirizzo=" + indirizzo
+				+ ", disponibilita=" + disponibilita + ", immagineVeicolo=" + immagineVeicolo + "]";
+	}
+	
+	
 	
 	
 

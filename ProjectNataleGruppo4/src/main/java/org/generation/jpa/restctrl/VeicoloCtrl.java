@@ -57,6 +57,7 @@ public class VeicoloCtrl {
 	public ResponseEntity<?> addVeicolo(@RequestBody VeicoloEntity veicolo){
 	     try {
 	    	 veicoloService.postVeicolo(veicolo);
+	    	 System.out.println(veicolo);
 	         return ResponseEntity.ok(veicolo);
 	     }
 	     catch (DataIntegrityViolationException e) {
