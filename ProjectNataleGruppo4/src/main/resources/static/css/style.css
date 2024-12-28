@@ -195,31 +195,142 @@ p {
 
 /* --------------------------- VEICOLI DISPONIBILI -------------------------- */
 
-#disponibili {
-  background-color: #f8f9fa;
-  padding-top: 20px;
-}
-
 .veicoli-title {
   border-bottom: 2px dashed #005478;
   color: #005478;
   margin: 10px;
 }
 
-.card-title {
-  color: #005478;
-}
-
-.card {
+.my-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 350px;
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   margin: 10px;
 }
 
+.my-card .image {
+  width: 100%;
+  height: 200px; 
+  overflow: hidden;
+}
+
+.my-card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.my-card-text {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px; 
+}
+
+.my-card-text h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.my-card-text p {
+  font-size: 1rem;
+  color: #555;
+  flex-grow: 1; 
+}
+
+
+.my-card-text button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.my-card-text button:hover {
+  background-color: #0056b3;
+}
+
+
 /* --------------------------- VEICOLI NOLEGGIATI -------------------------- */
 
-#noleggiati {
-  background-color: #f8f9fa;
-  padding: 20px 0;
+
+.my-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 350px; 
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 10px;
 }
+
+.my-card .image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.my-card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.my-card-text {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 240px; 
+}
+
+
+.my-card-text h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.my-card-text p {
+  font-size: 1rem;
+  color: #555;
+  flex-grow: 1; 
+}
+
+
+.my-card-text button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.my-card-text button:hover {
+  background-color: #0056b3;
+}
+
+
+
 
 /* --------------------------------- FOOTER --------------------------------- */
 footer {
@@ -290,7 +401,7 @@ footer ul li a:hover {
 
 /* ------------------------------ VEICOLO.HTML ------------------------------ */
 
-#veicolo {
+/* #veicolo {
   background-color: #f8f9fa;
   padding: 20px 0;
   margin-top: 75px;
@@ -299,11 +410,84 @@ footer ul li a:hover {
   flex-direction: column;
 }
 
-#map { height: 180px; }
+#map {  
+display: flex;
+margin: 0 auto;
+height: 70vh;
+width: 97%;
+border-radius: 5px;
+}
 
 .noleggia-btn {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+} */
+
+#veicolo {
+  background-color: #ffffff; /* Sfondo bianco */
+  padding: 20px; /* Spaziatura interna */
+  border-radius: 10px; /* Bordi arrotondati */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombra più marcata per l'effetto "popup" */
+  max-width: 900px; /* Larghezza massima per il contenuto */
+  margin: 50px auto; /* Centra verticalmente e orizzontalmente */
+  position: relative; /* Posizionamento normale per il riquadro */
+  margin-top: 100px;
+}
+
+.veichle-intro {
+  text-align: center;
   margin-bottom: 20px;
 }
+
+.marca-modello {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.immagine-veicolo {
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+}
+
+.caratteristiche {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.caratteristiche div {
+  text-align: center;
+}
+
+.caratteristiche h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.caratteristiche p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.noleggia-btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#map {  
+  display: flex;
+  margin: 0 auto;
+  height: 40vh;
+  width: 97%;
+  border-radius: 5px;
+  }
 
 /* ------------------------------ SCHERMI MEDI ------------------------------ */
 
@@ -311,6 +495,13 @@ footer ul li a:hover {
   #welcome {
     margin-top: 68px;
   }
+  #map {  
+    display: flex;
+    margin: 0 auto;
+    height: 50vh;
+    width: 97%;
+    border-radius: 5px;
+    }
 
 }
 /* ----------------------------- SCHERMI GRANDI ----------------------------- */
@@ -344,5 +535,13 @@ footer ul li a:hover {
     margin-right: 15px;
     margin-bottom: 0;
   }
+
+  #map {  
+    display: flex;
+    margin: 0 auto;
+    height: 70vh;
+    width: 97%;
+    border-radius: 5px;
+    }
 
 }

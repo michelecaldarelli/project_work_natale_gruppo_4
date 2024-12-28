@@ -8,6 +8,7 @@ fetch(`http://localhost:8099/api/veicolo/${localStorage.getItem("idVeicolo")}`)
       const descVeicolo = document.querySelector('.descrizione');
       const aliVeicolo = document.querySelector('.alimentazione');
       const indirizzo = document.querySelector('.indirizzo');
+      const noleggiaBtn = document.querySelector('.btn-noleggia');
   
       console.log(data.immagineVeicolo);
       console.log(immagineVeicolo);
@@ -20,6 +21,19 @@ fetch(`http://localhost:8099/api/veicolo/${localStorage.getItem("idVeicolo")}`)
       descVeicolo.innerHTML = data.descrizione;
       aliVeicolo.innerHTML = data.alimentazione;
       indirizzo.innerHTML = data.indirizzo;
+
+      if (data.disponibilita == 0) {
+        noleggiaBtn.innerHTML = "Non Disponibile";
+        noleggiaBtn.classList.remove("btn-primary"); 
+        noleggiaBtn.classList.add("btn-danger");  
+        noleggiaBtn.setAttribute("disabled", "true"); 
+      } else {
+        noleggiaBtn.innerHTML = "Noleggia Ora";
+        noleggiaBtn.classList.remove("btn-danger"); 
+        noleggiaBtn.classList.add("btn-primary"); 
+        noleggiaBtn.removeAttribute("disabled"); 
+      }
+
       const progressCircle = document.querySelector(".autoplay-progress svg");
       const progressContent = document.querySelector(".autoplay-progress span");
       var swiper = new Swiper(".mySwiper", {
@@ -77,7 +91,6 @@ fetch(`http://localhost:8099/api/veicolo/${localStorage.getItem("idVeicolo")}`)
         getCoordinatesFromAddress(addressElement.textContent);
       });
 })
-
 
 
 
