@@ -37,6 +37,7 @@ public class loginCtrl {
 	    if (utenteTrovato != null) {
 	        if (utente.getPassword().equals(utenteTrovato.getPassword())) {
 	            UtenteDto utenteSalvato = new UtenteDto(
+	            		utenteTrovato.getUtente_id(),
 	            		utenteTrovato.getNome(),
 	            		utenteTrovato.getEmail(),
 	            		utenteTrovato.getRuolo());

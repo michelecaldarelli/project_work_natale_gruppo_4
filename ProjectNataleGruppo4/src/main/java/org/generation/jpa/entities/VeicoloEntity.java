@@ -1,13 +1,9 @@
 package org.generation.jpa.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "veicolo")
@@ -42,7 +38,8 @@ public class VeicoloEntity {
 	@Column(length = 50)
 	private String immagineVeicolo;
 	
-	
+	@OneToMany(mappedBy = "veicolo", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<PrenotazioneEntity> prenotazioni = new ArrayList<>();
 
 	public VeicoloEntity() {
 	}
@@ -114,6 +111,18 @@ public class VeicoloEntity {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+	
+	
+
+
+	public List<PrenotazioneEntity> getPrenotazioni() {
+		return prenotazioni;
+	}
+
+
+	public void setPrenotazioni(List<PrenotazioneEntity> prenotazioni) {
+		this.prenotazioni = prenotazioni;
+	}
 
 
 	public VeicoloEntity(long id, String marca, String modello, Categoria categoria, String descrizione,
@@ -139,7 +148,17 @@ public class VeicoloEntity {
 	}
 	
 	
-	
+	// Metodo per aggiungere una prenotazione
+	public void addPrenotazione(PrenotazioneEntity prenotazione) {
+	    prenotazioni.add(prenotazione);
+	    prenotazione.setVeicolo(this);
+	}
+
+	// Metodo per rimuovere una prenotazione
+	public void removePrenotazione(PrenotazioneEntity prenotazione) {
+	    prenotazioni.remove(prenotazione);
+	    prenotazione.setVeicolo(null);
+	}
 	
 
 }

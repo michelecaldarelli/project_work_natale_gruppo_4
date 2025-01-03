@@ -90,6 +90,18 @@ fetch(`http://localhost:8099/api/veicolo/${localStorage.getItem("idVeicolo")}`)
       addressElement.addEventListener("input", () => {
         getCoordinatesFromAddress(addressElement.textContent);
       });
+
+      noleggiaBtn.addEventListener('click', e => {
+        if(noleggiaBtn.innerHTML == "Noleggia Ora") {
+          fetch(`http://localhost:8099/api/veicolo/prenota:${localStorage.getItem("idVeicolo")}`, 
+          {
+            method: 'PUT'
+          })
+          .then(res => res.json())
+          .then(data => console.log(data))
+          .catch(err => console.log(err))
+        }
+      });
 })
 
 

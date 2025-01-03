@@ -1,8 +1,11 @@
 package org.generation.jpa.entities;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -10,6 +13,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -38,6 +42,18 @@ public class UtenteEntity {
 	@Enumerated(EnumType.STRING)
 	private Ruolo ruolo;
 	
+	@OneToMany(mappedBy = "utente", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<PrenotazioneEntity> prenotazioni = new ArrayList<>();
+
+	
+	public List<PrenotazioneEntity> getPrenotazioni() {
+		return prenotazioni;
+	}
+
+	public void setPrenotazioni(List<PrenotazioneEntity> prenotazioni) {
+		this.prenotazioni = prenotazioni;
+	}
+
 	public UtenteEntity() {
 	}
 	
@@ -104,6 +120,17 @@ public class UtenteEntity {
 	}
 	
 	
+	// Metodo per aggiungere una prenotazione
+	public void addPrenotazione(PrenotazioneEntity prenotazione) {
+	    prenotazioni.add(prenotazione);
+	    prenotazione.setUtente(this);
+	}
+
+	// Metodo per rimuovere una prenotazione
+	public void removePrenotazione(PrenotazioneEntity prenotazione) {
+	    prenotazioni.remove(prenotazione);
+	    prenotazione.setUtente(null);
+	}
 	
 	
 	
