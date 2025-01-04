@@ -11,7 +11,8 @@ async function checkLogin() {
             if (res.status === 200) {
             return res.json();
         } else {
-            throw new Error(`Nessun utente loggato`);
+            fetch('http://localhost:8099/logout');
+            // throw new Error(`Nessun utente loggato`);
         }})
         .then(data => {
             console.log(data);

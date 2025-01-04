@@ -489,6 +489,19 @@ border-radius: 5px;
   border-radius: 5px;
   }
 
+/* ------------------------------- Utente.html ------------------------------ */
+
+.spiega {
+  color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.prenotazioni {
+  color: #189ddc
+}
+
 /* ------------------------------ SCHERMI MEDI ------------------------------ */
 
 @media screen and (min-width: 768px) {

@@ -8,11 +8,7 @@ fetch(`http://localhost:8099/api/veicolo/${localStorage.getItem("idVeicolo")}`)
       const descVeicolo = document.querySelector('.descrizione');
       const aliVeicolo = document.querySelector('.alimentazione');
       const indirizzo = document.querySelector('.indirizzo');
-      const noleggiaBtn = document.querySelector('.btn-noleggia');
-  
-      console.log(data.immagineVeicolo);
-      console.log(immagineVeicolo);
-      
+      const noleggiaBtn = document.querySelector('.btn-noleggia');   
 
   
       nomeVeicolo.innerHTML = `${data.marca} - ${data.modello}`;
@@ -22,36 +18,7 @@ fetch(`http://localhost:8099/api/veicolo/${localStorage.getItem("idVeicolo")}`)
       aliVeicolo.innerHTML = data.alimentazione;
       indirizzo.innerHTML = data.indirizzo;
 
-      if (data.disponibilita == 0) {
-        noleggiaBtn.innerHTML = "Non Disponibile";
-        noleggiaBtn.classList.remove("btn-primary"); 
-        noleggiaBtn.classList.add("btn-danger");  
-        noleggiaBtn.setAttribute("disabled", "true"); 
-      } else {
-        noleggiaBtn.innerHTML = "Noleggia Ora";
-        noleggiaBtn.classList.remove("btn-danger"); 
-        noleggiaBtn.classList.add("btn-primary"); 
-        noleggiaBtn.removeAttribute("disabled"); 
-      }
-
-      const progressCircle = document.querySelector(".autoplay-progress svg");
-      const progressContent = document.querySelector(".autoplay-progress span");
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        }
-      });
+      checkDisponibilita(data);
       
       var map = L.map("map").setView([51.505, -0.09], 14);
       L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -90,7 +57,7 @@ fetch(`http://localhost:8099/api/veicolo/${localStorage.getItem("idVeicolo")}`)
       addressElement.addEventListener("input", () => {
         getCoordinatesFromAddress(addressElement.textContent);
       });
-
+      
       noleggiaBtn.addEventListener('click', e => {
         if(noleggiaBtn.innerHTML == "Noleggia Ora") {
           fetch(`http://localhost:8099/api/veicolo/prenota:${localStorage.getItem("idVeicolo")}`, 
@@ -98,23 +65,28 @@ fetch(`http://localhost:8099/api/veicolo/${localStorage.getItem("idVeicolo")}`)
             method: 'PUT'
           })
           .then(res => res.json())
-          .then(data => console.log(data))
+          .then(data => {
+            console.log(data);
+            checkDisponibilita(data);
+          })
           .catch(err => console.log(err))
         }
       });
 })
 
 
+function checkDisponibilita(data) {
+  const noleggiaBtn = document.querySelector('.btn-noleggia');
 
-
-
-
-
-
-
-
-
-
-
-
-    
+  if (data.disponibilita == 0) {
+    noleggiaBtn.innerHTML = "Non Disponibile";
+    noleggiaBtn.classList.remove("btn-primary"); 
+    noleggiaBtn.classList.add("btn-danger");  
+    noleggiaBtn.setAttribute("disabled", "true"); 
+  } else {
+    noleggiaBtn.innerHTML = "Noleggia Ora";
+    noleggiaBtn.classList.remove("btn-danger"); 
+    noleggiaBtn.classList.add("btn-primary"); 
+    noleggiaBtn.removeAttribute("disabled"); 
+  }
+}

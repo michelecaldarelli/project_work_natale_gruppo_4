@@ -33,7 +33,9 @@ public class loginCtrl {
 	
 	@PostMapping("/login")
 	public ResponseEntity<?> login(@RequestBody UtenteEntity utente) {
-	    UtenteEntity utenteTrovato = utenteService.getByEmail(utente.getEmail());
+	    System.out.println(utente);
+		UtenteEntity utenteTrovato = utenteService.getByEmail(utente.getEmail());
+	    
 	    if (utenteTrovato != null) {
 	        if (utente.getPassword().equals(utenteTrovato.getPassword())) {
 	            UtenteDto utenteSalvato = new UtenteDto(

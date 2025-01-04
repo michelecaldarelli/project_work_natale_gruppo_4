@@ -2,6 +2,9 @@ package org.generation.jpa.entities;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -17,6 +20,7 @@ public class PrenotazioneEntity {
 	
 	@ManyToOne
     @JoinColumn(name = "veicolo_id", nullable = false)
+	@JsonIgnore
     private VeicoloEntity veicolo;
 	
 	@Column(nullable = true)
@@ -27,6 +31,7 @@ public class PrenotazioneEntity {
 
     @ManyToOne
     @JoinColumn(name = "utente_id", nullable = false)
+    @JsonIgnore
     private UtenteEntity utente;
     
     
