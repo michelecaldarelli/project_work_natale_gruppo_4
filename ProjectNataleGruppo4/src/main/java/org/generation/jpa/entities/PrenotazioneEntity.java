@@ -86,11 +86,16 @@ public class PrenotazioneEntity {
 		this.dataFine = dataFine;
 	}
 
+	public long getVeicoloId() {
+		return veicolo.getId();
+	}
+	
 	@Override
 	public String toString() {
 		return "PrenotazioneEntity [id=" + id + ", attiva=" + attiva + ",\n veicolo=" + veicolo + ", dataInizio="
 				+ dataInizio + ", dataFine=" + dataFine + ",\n utente=" + utente + "]";
 	}
+	
 
 	
     
