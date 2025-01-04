@@ -83,10 +83,23 @@ function checkDisponibilita(data) {
     noleggiaBtn.classList.remove("btn-primary"); 
     noleggiaBtn.classList.add("btn-danger");  
     noleggiaBtn.setAttribute("disabled", "true"); 
-  } else {
-    noleggiaBtn.innerHTML = "Noleggia Ora";
-    noleggiaBtn.classList.remove("btn-danger"); 
-    noleggiaBtn.classList.add("btn-primary"); 
-    noleggiaBtn.removeAttribute("disabled"); 
+  }
+  else {
+    fetch('http://localhost:8099/login/userData')
+        .then(res => res.json())
+        .then(data => {
+          if(data.id != 0) {
+            noleggiaBtn.classList.remove("btn-danger"); 
+            noleggiaBtn.classList.add("btn-primary"); 
+            noleggiaBtn.removeAttribute("disabled"); 
+            noleggiaBtn.innerHTML = "Noleggia Ora";
+          }
+          else {
+            noleggiaBtn.innerHTML = "Registrati per noleggiare";
+            noleggiaBtn.classList.remove("btn-primary"); 
+            noleggiaBtn.classList.add("btn-danger");  
+            noleggiaBtn.setAttribute("disabled", "true"); 
+          }
+        })
   }
 }

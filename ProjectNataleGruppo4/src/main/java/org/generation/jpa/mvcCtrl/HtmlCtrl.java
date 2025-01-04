@@ -72,5 +72,19 @@ public class HtmlCtrl {
 	public String errore() {
 		return "errore";
 	}
+	
+	@GetMapping("/utente")
+	public String utente() {
+		UtenteDto u = (UtenteDto) session.getAttribute("user");
+		if(u != null && u.getNome() != null) {
+			return "utente";			
+		}
+		return "redirect:/home";
+	}
+	
+	@GetMapping("/utente.html")
+	public String utenteRedirect() {
+		return "redirect:/utente";
+	}
 
 }

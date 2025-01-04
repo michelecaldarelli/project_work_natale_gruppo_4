@@ -20,8 +20,8 @@ public class PrenotazioneEntity {
 	
 	@ManyToOne
     @JoinColumn(name = "veicolo_id", nullable = false)
-	@JsonIgnore
-    private VeicoloEntity veicolo;
+    @JsonIgnore
+	private VeicoloEntity veicolo;
 	
 	@Column(nullable = true)
 	private LocalDateTime dataInizio;

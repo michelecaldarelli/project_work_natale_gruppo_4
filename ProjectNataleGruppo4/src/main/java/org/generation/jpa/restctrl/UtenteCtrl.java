@@ -53,4 +53,20 @@ public class UtenteCtrl {
         }
 	}
 	
+	@GetMapping("/id:{id}")
+	public ResponseEntity<UtenteEntity> getById(@PathVariable long id) {
+		try {
+            UtenteEntity utente = utenteService.getById(id);
+            if(utente != null){
+                return ResponseEntity.ok(utente); //200                
+            }
+            else{
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new UtenteEntity());
+            }
+        }
+        catch (Exception e) {
+            return ResponseEntity.internalServerError().body(new UtenteEntity());
+        }
+	}
+	
 }

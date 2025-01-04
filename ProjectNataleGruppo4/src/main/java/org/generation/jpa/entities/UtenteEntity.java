@@ -23,7 +23,7 @@ import jakarta.persistence.Table;
 public class UtenteEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long utente_id;
+	private long id;
 	
 	@Column(length = 75, nullable = false)
 	private String nome;
@@ -59,12 +59,12 @@ public class UtenteEntity {
 	public UtenteEntity() {
 	}
 	
-	public long getUtente_id() {
-		return utente_id;
+	public long getId() {
+		return id;
 	}
 	
-	public void setUtente_id(long utente_id) {
-		this.utente_id = utente_id;
+	public void setId(long id) {
+		this.id = id;
 	}
 	
 	public String getNome() {
@@ -117,7 +117,7 @@ public class UtenteEntity {
 
 	@Override
 	public String toString() {
-		return "UtenteEntity [utente_id=" + utente_id + ", nome=" + nome + ", cognome=" + cognome + ", dataNascita="
+		return "UtenteEntity [utente_id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", dataNascita="
 				+ dataNascita + ", email=" + email + ", password=" + password + ", ruolo=" + ruolo + "]";
 	}
 	

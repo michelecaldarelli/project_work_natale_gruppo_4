@@ -52,7 +52,7 @@
               <a class="nav-link" href="#disponibili">Disponibilità</a>
             </li>
           </ul>
-          <div class="login-name"></div>
+          <a href="utente.html" class="login-name text-decoration-none d-none"><i class="fa-regular fa-user"></i></a>
           <button class="btn btn-primary btn-login d-none">Accedi</button>
         </div>
       </div>
@@ -65,7 +65,6 @@
         <div class="profilo-utente col-lg-4">
           <h3 class="mt-3">Hai accesso come: </h3>
           <div class="profilo-name">
-            <h1>Admin</h1>
           </div>
         </div>
         <div class="spiega col-lg-8">
@@ -79,11 +78,8 @@
   <section id="prenota">
     <div class="container">
       <div class="elenco-prenotazioni">
-        <h2 class="mt-3">Elenco delle prenotazioni:</h2>
-        <div class="prenotazioni"> <!--dinamico-->
-          <div class="prenotazione-effettiva">bho</div>
-          <button class="btn btn-danger btn-cancella">Cancella Prenotazione</button>
-        </div>
+        <h2 class="mt-3">Elenco delle prenotazioni attive:</h2>
+        <ul class="lista-prenotazioni"></ul>
       </div>
     </div>
   </section>
@@ -104,7 +100,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <!-- ------------------------------- JS------------------------------- -->
-  <script src=js/homepage.js></script>
+  <script src=js/utente.js></script>
   <script src="js/common-login.js"></script>
 </body>
 

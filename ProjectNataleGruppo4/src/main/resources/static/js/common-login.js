@@ -18,7 +18,7 @@ async function checkLogin() {
             console.log(data);
             if(data.nome != null) {
                 loginName.classList.remove("d-none");
-                loginName.innerHTML = `${data.ruolo}: ${data.nome}`;
+                // loginName.innerHTML = `${data.ruolo}: ${data.nome}`;
 
                 btnLogin.textContent="Logout";
                 btnLogin.classList.remove("d-none");

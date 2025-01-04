@@ -52,7 +52,7 @@ fetch('http://localhost:8099/api/veicolo')
     for(let i = 0; i<data.length; i++){
       if(data[i].disponibilita) {
         veicoliDisponibili.innerHTML += `
-          <div class="card-container col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center">
+          <div class="card-container col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center my-3">
             <div class="card" style="width: 15rem;">
               <img class="card-img-top" src="images/img-database/${data[i].immagineVeicolo}" alt="Card image cap">
               <div class="card-body">
@@ -91,7 +91,7 @@ fetch('http://localhost:8099/api/veicolo')
   for(let i = 0; i<data.length; i++){
     if(!data[i].disponibilita) {
       veicoliNoleggiati.innerHTML += `
-      <div class="card-container col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center">
+      <div class="card-container col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center my-3">
       <div class="card" style="width: 15rem;">
       <img class="card-img-top" src="images/img-database/${data[i].immagineVeicolo}" alt="Card image cap">
       <div class="card-body">

@@ -2,6 +2,7 @@ package org.generation.jpa.services;
 
 import java.util.List;
 
+import org.generation.jpa.entities.PrenotazioneEntity;
 import org.generation.jpa.entities.UtenteEntity;
 import org.generation.jpa.repositories.UtenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,10 @@ public class UtenteServiceImpl implements UtenteService{
 	public UtenteEntity getByEmail(String email) {
 		return utenteRepository.findByEmail(email);
 	}
-	
-	
+
+	@Override
+	public UtenteEntity getById(long id) {
+		return utenteRepository.findById(id);
+	}
 
 }

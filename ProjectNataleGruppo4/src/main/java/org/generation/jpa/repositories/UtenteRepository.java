@@ -10,5 +10,7 @@ public interface UtenteRepository extends JpaRepository<UtenteEntity, Long>{
 	List<UtenteEntity> findAll();
 	
 	UtenteEntity findByEmail(String email);
+	
+	UtenteEntity findById(long id);
 
 }
