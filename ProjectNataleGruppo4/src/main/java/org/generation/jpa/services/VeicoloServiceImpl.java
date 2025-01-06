@@ -69,6 +69,4 @@ public class VeicoloServiceImpl implements VeicoloService{
 		return veicoli;
 	}
 	
-	
-	
 }

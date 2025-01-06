@@ -87,6 +87,9 @@ public class PrenotazioneEntity {
 	}
 
 	public long getVeicoloId() {
+		if(this.veicolo == null) {
+			return 0;
+		}
 		return veicolo.getId();
 	}
 	

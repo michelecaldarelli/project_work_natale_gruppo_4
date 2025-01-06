@@ -2,6 +2,7 @@ package org.generation.jpa.services;
 
 import java.util.List;
 
+import org.generation.jpa.entities.PrenotazioneEntity;
 import org.generation.jpa.entities.VeicoloEntity;
 import org.springframework.stereotype.Service;
 
